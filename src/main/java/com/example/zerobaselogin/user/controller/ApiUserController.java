@@ -1,8 +1,10 @@
 package com.example.zerobaselogin.user.controller;
 
 import com.example.zerobaselogin.user.entity.User;
+import com.example.zerobaselogin.user.exception.UserNotFoundException;
 import com.example.zerobaselogin.user.model.ResponseError;
 import com.example.zerobaselogin.user.model.UserInput;
+import com.example.zerobaselogin.user.model.Userupdate;
 import com.example.zerobaselogin.user.repository.UserRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -10,9 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.Errors;
 import org.springframework.validation.FieldError;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -61,5 +61,34 @@ public class ApiUserController {
         userRepository.save(user);
 
         return ResponseEntity.ok().build();
+    }
+
+    @PutMapping("/api/user/{id}")
+    public ResponseEntity<?> updateUser(@PathVariable("id") Long id,
+                                                      @RequestBody @Valid Userupdate userupdate,
+                                                      Errors errors) {
+
+        List<ResponseError> responseErrorList = new ArrayList<>();
+
+        if (errors.hasErrors()) {
+            errors.getAllErrors().forEach(e -> {
+                responseErrorList.add(ResponseError.of((FieldError) e)); // 에러 목록이 쌓임
+            });
+            return new ResponseEntity<>(responseErrorList, HttpStatus.BAD_REQUEST);
+        }
+
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new UserNotFoundException("사용자 정보가 없습니다."));
+
+        user.setPhone(userupdate.getPhone());
+        user.setUpdateDate(LocalDateTime.now());
+        userRepository.save(user);
+
+        return ResponseEntity.ok().build();
+    }
+
+    @ExceptionHandler(UserNotFoundException.class)
+    public ResponseEntity<?> UserNotFoundExceptionHandler(UserNotFoundException exception) {
+        return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
     }
 }
