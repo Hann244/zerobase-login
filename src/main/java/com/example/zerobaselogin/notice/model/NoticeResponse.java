@@ -18,7 +18,7 @@ public class NoticeResponse {
 
     private long id;
 
-    private long regUserId;
+    private Long regUserId;
     private String regUserName;
 
     private String title;
@@ -34,6 +34,8 @@ public class NoticeResponse {
                 .title(notice.getTitle())
                 .contents(notice.getContents())
                 .regDate(notice.getRegDate())
+                .regUserId(notice.getUser().getId())
+                .regUserName(notice.getUser().getUserName())
                 .updateDate(notice.getUpdateDate())
                 .hits(notice.getHits())
                 .likes(notice.getLikes())

@@ -1,5 +1,8 @@
 package com.example.zerobaselogin.user.controller;
 
+import com.example.zerobaselogin.notice.entity.Notice;
+import com.example.zerobaselogin.notice.model.NoticeResponse;
+import com.example.zerobaselogin.notice.repository.NoticeRepository;
 import com.example.zerobaselogin.user.entity.User;
 import com.example.zerobaselogin.user.exception.UserNotFoundException;
 import com.example.zerobaselogin.notice.model.ResponseError;
@@ -24,6 +27,7 @@ import java.util.List;
 public class ApiUserController {
 
     private final UserRepository userRepository;
+    private final NoticeRepository noticeRepository;
 
     // 예외 처리
 //    @PostMapping("/api/user")
@@ -103,5 +107,20 @@ public class ApiUserController {
         UserResponse userResponse = UserResponse.of(user);
 
         return userResponse;
+    }
+
+    @GetMapping("/api/user/{id}/notice")
+    public List<NoticeResponse> userNotice(@PathVariable("id") Long id) {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new UserNotFoundException("사용자 정보가 없습니다."));
+
+        List<Notice> noticeList = noticeRepository.findByUser(user);
+
+        List<NoticeResponse> noticeResponseList = new ArrayList<>();
+        noticeList.stream().forEach((e) -> {
+            noticeResponseList.add(NoticeResponse.of(e));
+        });
+
+        return noticeResponseList;
     }
 }

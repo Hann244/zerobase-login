@@ -20,6 +20,10 @@ public class Notice {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @ManyToOne
+    @JoinColumn
+    private User user;
+
     @Column
     private String title;
 
