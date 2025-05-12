@@ -1,4 +1,4 @@
-package com.example.zerobaselogin.user.model;
+package com.example.zerobaselogin.notice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

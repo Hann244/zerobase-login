@@ -2,7 +2,7 @@ package com.example.zerobaselogin.user.controller;
 
 import com.example.zerobaselogin.user.entity.User;
 import com.example.zerobaselogin.user.exception.UserNotFoundException;
-import com.example.zerobaselogin.user.model.ResponseError;
+import com.example.zerobaselogin.notice.model.ResponseError;
 import com.example.zerobaselogin.user.model.UserInput;
 import com.example.zerobaselogin.user.model.UserResponse;
 import com.example.zerobaselogin.user.model.Userupdate;
