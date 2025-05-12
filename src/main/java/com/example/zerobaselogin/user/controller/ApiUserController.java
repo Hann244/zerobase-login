@@ -4,6 +4,7 @@ import com.example.zerobaselogin.user.entity.User;
 import com.example.zerobaselogin.user.exception.UserNotFoundException;
 import com.example.zerobaselogin.user.model.ResponseError;
 import com.example.zerobaselogin.user.model.UserInput;
+import com.example.zerobaselogin.user.model.UserResponse;
 import com.example.zerobaselogin.user.model.Userupdate;
 import com.example.zerobaselogin.user.repository.UserRepository;
 import jakarta.validation.Valid;
@@ -90,5 +91,17 @@ public class ApiUserController {
     @ExceptionHandler(UserNotFoundException.class)
     public ResponseEntity<?> UserNotFoundExceptionHandler(UserNotFoundException exception) {
         return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
+    }
+
+    @GetMapping("/api/user/{id}")
+    public UserResponse getUser(@PathVariable("id") Long id) {
+
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new UserNotFoundException("사용자 정보가 없습니다."));
+
+        //UserResponse userResponse = new UserResponse(user);
+        UserResponse userResponse = UserResponse.of(user);
+
+        return userResponse;
     }
 }
