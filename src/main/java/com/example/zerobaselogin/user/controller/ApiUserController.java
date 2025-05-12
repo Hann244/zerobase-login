@@ -51,24 +51,15 @@ public class ApiUserController {
             return new ResponseEntity<>(responseErrorList, HttpStatus.BAD_REQUEST);
         }
 
-        try {
-            User user = User.builder()
-                    .email(userInput.getEmail())
-                    .userName(userInput.getUserName())
-                    .password(userInput.getPassword())
-                    .phone(userInput.getPhone())
-                    .regDate(LocalDateTime.now())
-                    .build();
-            userRepository.save(user);
+        User user = User.builder()
+                .email(userInput.getEmail())
+                .userName(userInput.getUserName())
+                .password(userInput.getPassword())
+                .phone(userInput.getPhone())
+                .regDate(LocalDateTime.now())
+                .build();
+        userRepository.save(user);
 
-            return ResponseEntity.ok().build();
-        } catch (Exception e) {
-            // 예외 로그 출력
-            e.printStackTrace();
-            return new ResponseEntity<>("사용자 저장 중 오류 발생: " + e.getMessage(),
-                    HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-
-        //return ResponseEntity.ok().build();
+        return ResponseEntity.ok().build();
     }
 }
