@@ -1,5 +1,8 @@
 package com.example.zerobaselogin.user.controller;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.SignatureVerificationException;
 import com.example.zerobaselogin.notice.entity.Notice;
 import com.example.zerobaselogin.notice.entity.NoticeLike;
 import com.example.zerobaselogin.notice.model.NoticeResponse;
@@ -12,6 +15,9 @@ import com.example.zerobaselogin.user.exception.UserNotFoundException;
 import com.example.zerobaselogin.notice.model.ResponseError;
 import com.example.zerobaselogin.user.model.*;
 import com.example.zerobaselogin.user.repository.UserRepository;
+import com.example.zerobaselogin.util.JWTUtils;
+import com.example.zerobaselogin.util.PasswordUtils;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -24,6 +30,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -306,5 +313,161 @@ public class ApiUserController {
         List<NoticeLike> noticeLikeList = noticeLikeRepository.findByUser(user);
 
         return noticeLikeList;
+    }
+
+    // 사용자 이메일과 비밀번호로 JWT 토큰 발행 -> 로그인 API부터
+    /*
+    @PostMapping("/api/user/login")
+    public ResponseEntity<?> createToken(@RequestBody @Valid UserLogin userLogin,
+                            Errors errors) {
+
+        List<ResponseError> responseErrorList = new ArrayList<>();
+
+        if (errors.hasErrors()) {
+            errors.getAllErrors().forEach(e -> {
+                responseErrorList.add(ResponseError.of((FieldError) e)); // 에러 목록이 쌓임
+            });
+            return new ResponseEntity<>(responseErrorList, HttpStatus.BAD_REQUEST);
+        }
+        User user = userRepository.findByEmail(userLogin.getEmail())
+                .orElseThrow(() -> new UserNotFoundException("사용자 정보가 없습니다."));
+
+        if (!PasswordUtils.equalPassword(userLogin.getPassword(), user.getPassword())) {
+            throw new PasswordNotMatchException("비밀번호가 일치하지 않습니다.");
+        }
+
+        return ResponseEntity.ok().build();
+
+    }
+    
+     */
+
+    // JWT 토큰 발행
+    /*
+    @PostMapping("/api/user/login")
+    public ResponseEntity<?> createToken(@RequestBody @Valid UserLogin userLogin,
+                                         Errors errors) {
+
+        List<ResponseError> responseErrorList = new ArrayList<>();
+
+        if (errors.hasErrors()) {
+            errors.getAllErrors().forEach(e -> {
+                responseErrorList.add(ResponseError.of((FieldError) e)); // 에러 목록이 쌓임
+            });
+            return new ResponseEntity<>(responseErrorList, HttpStatus.BAD_REQUEST);
+        }
+        User user = userRepository.findByEmail(userLogin.getEmail())
+                .orElseThrow(() -> new UserNotFoundException("사용자 정보가 없습니다."));
+
+        if (!PasswordUtils.equalPassword(userLogin.getPassword(), user.getPassword())) {
+            throw new PasswordNotMatchException("비밀번호가 일치하지 않습니다.");
+        }
+        
+        // 토큰 발행 시점(jwt 라이브러리 필요)
+        String token = JWT.create()
+                .withExpiresAt(new Date()) // 유효기간
+                .withClaim("user_id", user.getId()) // 실질적으로 키와 값들을 저장
+                .withSubject(user.getUserName()) // 일반적으로 사용자 이름을 넣음
+                .withIssuer(user.getEmail())
+                .sign(Algorithm.HMAC512("fastcampus".getBytes())); // 암호화 키를 바이트로
+
+        return ResponseEntity.ok().body(UserLoginToken.builder()
+                .token(token)
+                .build());
+
+    }
+
+     */
+
+    // JWT 토큰 발행 유효기간을 1개월로 저장
+    @PostMapping("/api/user/login")
+    public ResponseEntity<?> createToken(@RequestBody @Valid UserLogin userLogin,
+                                         Errors errors) {
+
+        List<ResponseError> responseErrorList = new ArrayList<>();
+
+        if (errors.hasErrors()) {
+            errors.getAllErrors().forEach(e -> {
+                responseErrorList.add(ResponseError.of((FieldError) e)); // 에러 목록이 쌓임
+            });
+            return new ResponseEntity<>(responseErrorList, HttpStatus.BAD_REQUEST);
+        }
+        User user = userRepository.findByEmail(userLogin.getEmail())
+                .orElseThrow(() -> new UserNotFoundException("사용자 정보가 없습니다."));
+
+        if (!PasswordUtils.equalPassword(userLogin.getPassword(), user.getPassword())) {
+            throw new PasswordNotMatchException("비밀번호가 일치하지 않습니다.");
+        }
+
+        // 유효기간 한 달로 설정
+        LocalDateTime expiredDateTime = LocalDateTime.now().plusMonths(1);
+        Date expiredDate = java.sql.Timestamp.valueOf(expiredDateTime);
+
+        // 토큰 발행 시점(jwt 라이브러리 필요)
+        String token = JWT.create()
+                .withExpiresAt(expiredDate) // 유효기간
+                .withClaim("user_id", user.getId()) // 실질적으로 키와 값들을 저장
+                .withSubject(user.getUserName()) // 일반적으로 사용자 이름을 넣음
+                .withIssuer(user.getEmail())
+                .sign(Algorithm.HMAC512("fastcampus".getBytes())); // 암호화 키를 바이트로
+
+        return ResponseEntity.ok().body(UserLoginToken.builder()
+                .token(token)
+                .build());
+
+    }
+
+    // JWT 재발행
+    @PatchMapping("/api/user/login")
+    public ResponseEntity<?> refreshToken(HttpServletRequest request) {
+
+        String token = request.getHeader("F-TOKEN");
+        String email = "";
+
+        try {
+            email = JWT.require(Algorithm.HMAC512("fastcampus".getBytes()))
+                    .build()
+                    .verify(token)
+                    .getIssuer();
+        } catch (SignatureVerificationException e) {
+            throw new PasswordNotMatchException("비밀번호가 일치하지 않습니다."); // 임시 예외 처리
+        }
+
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new UserNotFoundException("사용자 정보가 없습니다."));
+
+        LocalDateTime expiredDateTime = LocalDateTime.now().plusMonths(1);
+        Date expiredDate = java.sql.Timestamp.valueOf(expiredDateTime);
+
+        String newToken = JWT.create()
+                .withExpiresAt(expiredDate) // 유효기간
+                .withClaim("user_id", user.getId()) // 실질적으로 키와 값들을 저장
+                .withSubject(user.getUserName()) // 일반적으로 사용자 이름을 넣음
+                .withIssuer(user.getEmail())
+                .sign(Algorithm.HMAC512("fastcampus".getBytes())); // 암호화 키를 바이트로
+
+        return ResponseEntity.ok().body(UserLoginToken.builder()
+                .token(newToken)
+                .build());
+    }
+
+    // JWT 삭제 API
+    @DeleteMapping("/api/user/login")
+    public ResponseEntity<?> removeToken(@RequestHeader("F-TOKEN") String token) {
+
+        String email = "";
+
+        try {
+            email = JWTUtils.getIssuer(token);
+        } catch (SignatureVerificationException e) {
+            return new ResponseEntity<>("토큰 정보가 정확하지 않습니다.", HttpStatus.BAD_REQUEST);
+        }
+
+        // 세션, 쿠키삭제
+        // 클라이언트 쿠키/로컬스토리지/세션스토리지 삭제
+        // 정말 문제가 될 때 -> 블랙리스트 작성
+
+        return ResponseEntity.ok().build();
+
     }
 }
