@@ -5,7 +5,22 @@ VALUES ( 'test@naver.com', '1111', '010-1111-2222', '2021-02-01 00:49:43.000000'
      , ('test3@gmail.com', '4444', '010-7777-9999', '2021-02-02 00:27:51.000000', null, '박하영', 2, 0);
 
 
-INSERT INTO NOTICE (ID, CONTENTS, DELETED_DATE, DELETED, HITS, LIKES, REG_DATE, TITLE, UPDATE_DATE, USER_ID)
-VALUES (2, '내용2', null, false, 0, 0, '2021-02-01 01:12:37.000000', '제목2', null, 1)
-     , (1, '내용1', null, false, 0, 0, '2021-02-01 01:12:20.000000', '제목1', null, 1)
-     , (3, '내용3', null, false, 0, 0, '2021-02-01 01:13:07.000000', '제목3', null, 2);
+INSERT INTO NOTICE (CONTENTS, DELETED_DATE, DELETED, HITS, LIKES, REG_DATE, TITLE, UPDATE_DATE, USER_ID)
+VALUES ('내용2', null, false, 0, 0, '2021-02-01 01:12:37.000000', '제목2', null, 1)
+     , ('내용1', null, false, 0, 0, '2021-02-01 01:12:20.000000', '제목1', null, 1)
+     , ('내용3', null, false, 0, 0, '2021-02-01 01:13:07.000000', '제목3', null, 2)
+     , ('내용4', null, false, 0, 0, '2021-02-01 01:13:10.000000', '제목4', null, 2)
+     , ('내용5', null, false, 0, 0, '2021-02-01 01:13:12.000000', '제목5', null, 2)
+     , ('내용6', null, false, 0, 0, '2021-02-01 23:31:23.000000', '제목6', null, 1)
+     , ('내용7', null, false, 0, 0, '2021-02-01 23:31:26.000000', '제목7', null, 3)
+     , ('내용8', null, false, 0, 0, '2021-02-01 23:31:32.000000', '제목8', null, 3)
+     , ('내용9', null, false, 0, 0, '2021-02-01 23:31:35.000000', '제목9', null, 1)
+     , ('내용10', null, false, 0, 0, '2021-02-01 23:31:38.000000', '제목10', null, 1);
+
+INSERT INTO NOTICE_LIKE (NOTICE_ID, USER_ID)
+VALUES (3, 1)
+     , (4, 1)
+     , (1, 1)
+     , (3, 2)
+     , (1, 4)
+     , (2, 4);

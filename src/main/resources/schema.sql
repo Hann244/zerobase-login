@@ -36,11 +36,11 @@ create table NOTICE
 );
 
 -- auto-generated definition
--- create table NOTICE_LIKE
--- (
---     ID          BIGINT auto_increment primary key,
---     NOTICE_ID   BIGINT,
---     USER_ID     BIGINT not null,
---     constraint  FK_NOTICE_LIKE_NOTICE_ID foreign key (NOTICE_ID) references NOTICE (ID),
---     constraint  FK_NOTICE_LIKE_USER_ID foreign key (USER_ID) references USERS (ID)
--- );
+create table NOTICE_LIKE
+(
+    ID          BIGINT auto_increment primary key,
+    NOTICE_ID   BIGINT,
+    USER_ID     BIGINT not null,
+    constraint  FK_NOTICE_LIKE_NOTICE_ID foreign key (NOTICE_ID) references NOTICE (ID),
+    constraint  FK_NOTICE_LIKE_USER_ID foreign key (USER_ID) references USERS (ID)
+);
