@@ -1,5 +1,7 @@
 package com.example.zerobaselogin.user.controller;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
 import com.example.zerobaselogin.notice.entity.Notice;
 import com.example.zerobaselogin.notice.entity.NoticeLike;
 import com.example.zerobaselogin.notice.model.NoticeResponse;
@@ -25,6 +27,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -309,7 +312,8 @@ public class ApiUserController {
         return noticeLikeList;
     }
 
-    // 사용자 이메일과 비밀번호로 JWT 토큰 발행 -> 로그인해야 됨
+    // 사용자 이메일과 비밀번호로 JWT 토큰 발행 -> 로그인 API부터
+    /*
     @PostMapping("/api/user/login")
     public ResponseEntity<?> createToken(@RequestBody @Valid UserLogin userLogin,
                             Errors errors) {
@@ -330,6 +334,42 @@ public class ApiUserController {
         }
 
         return ResponseEntity.ok().build();
+
+    }
+    
+     */
+
+    // JWT 토큰 발행
+    @PostMapping("/api/user/login")
+    public ResponseEntity<?> createToken(@RequestBody @Valid UserLogin userLogin,
+                                         Errors errors) {
+
+        List<ResponseError> responseErrorList = new ArrayList<>();
+
+        if (errors.hasErrors()) {
+            errors.getAllErrors().forEach(e -> {
+                responseErrorList.add(ResponseError.of((FieldError) e)); // 에러 목록이 쌓임
+            });
+            return new ResponseEntity<>(responseErrorList, HttpStatus.BAD_REQUEST);
+        }
+        User user = userRepository.findByEmail(userLogin.getEmail())
+                .orElseThrow(() -> new UserNotFoundException("사용자 정보가 없습니다."));
+
+        if (!PasswordUtils.equalPassword(userLogin.getPassword(), user.getPassword())) {
+            throw new PasswordNotMatchException("비밀번호가 일치하지 않습니다.");
+        }
+        
+        // 토큰 발행 시점(jwt 라이브러리 필요)
+        String token = JWT.create()
+                .withExpiresAt(new Date()) // 유효기간
+                .withClaim("user_id", user.getId()) // 실질적으로 키와 값들을 저장
+                .withSubject(user.getUserName()) // 일반적으로 사용자 이름을 넣음
+                .withIssuer(user.getEmail())
+                .sign(Algorithm.HMAC512("fastcampus".getBytes())); // 암호화 키를 바이트로
+
+        return ResponseEntity.ok().body(UserLoginToken.builder()
+                .token(token)
+                .build());
 
     }
 }
