@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @RequiredArgsConstructor
 @RestController
@@ -257,5 +258,38 @@ public class ApiUserController {
         UserResponse userResponse = UserResponse.of(user);
 
         return ResponseEntity.ok().body(userResponse);
+    }
+
+    // 초기화용 비밀번호를 만드는 메서드
+    private String getResetPassword() {
+
+        return UUID.randomUUID().toString().replace("-", "").substring(0, 10);
+    }
+
+    // 사용자 비밀번호 초기화 요청
+    @GetMapping("/api/user/{id}/password/reset")
+    public ResponseEntity<?> resetUserPassword(@PathVariable("id") Long id) {
+
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new UserNotFoundException("사용자 정보가 없습니다."));
+
+        // 비밀번호 초기화 -> 초기화한 내용을 DB에 저장 -> 문자 전송
+        String resetPassword = getResetPassword();
+        String resetEncryptPassword = getEncryptPassword(getResetPassword());
+        user.setPassword(resetEncryptPassword);
+        userRepository.save(user);
+
+        String message = String.format("[%s]님의 임시 비밀번호가 [%s]로 초기화 되었습니다.",
+                user.getUserName(),
+                resetPassword);
+        sendSMS(message);
+
+        return ResponseEntity.ok().build();
+    }
+
+    // 문자 보내는 건 가상으로... (원래는 외부 API 사용 필요)
+    void sendSMS(String message) {
+        System.out.println("[문자메시지전송]");
+        System.out.println(message);
     }
 }
