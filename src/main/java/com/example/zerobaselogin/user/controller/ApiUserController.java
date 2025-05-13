@@ -15,6 +15,7 @@ import com.example.zerobaselogin.user.exception.UserNotFoundException;
 import com.example.zerobaselogin.notice.model.ResponseError;
 import com.example.zerobaselogin.user.model.*;
 import com.example.zerobaselogin.user.repository.UserRepository;
+import com.example.zerobaselogin.util.JWTUtils;
 import com.example.zerobaselogin.util.PasswordUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
@@ -450,5 +451,23 @@ public class ApiUserController {
                 .build());
     }
 
+    // JWT 삭제 API
+    @DeleteMapping("/api/user/login")
+    public ResponseEntity<?> removeToken(@RequestHeader("F-TOKEN") String token) {
 
+        String email = "";
+
+        try {
+            email = JWTUtils.getIssuer(token);
+        } catch (SignatureVerificationException e) {
+            return new ResponseEntity<>("토큰 정보가 정확하지 않습니다.", HttpStatus.BAD_REQUEST);
+        }
+
+        // 세션, 쿠키삭제
+        // 클라이언트 쿠키/로컬스토리지/세션스토리지 삭제
+        // 정말 문제가 될 때 -> 블랙리스트 작성
+
+        return ResponseEntity.ok().build();
+
+    }
 }
