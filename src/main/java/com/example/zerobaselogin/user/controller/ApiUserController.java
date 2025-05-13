@@ -1,7 +1,9 @@
 package com.example.zerobaselogin.user.controller;
 
 import com.example.zerobaselogin.notice.entity.Notice;
+import com.example.zerobaselogin.notice.entity.NoticeLike;
 import com.example.zerobaselogin.notice.model.NoticeResponse;
+import com.example.zerobaselogin.notice.repository.NoticeLikeRepository;
 import com.example.zerobaselogin.notice.repository.NoticeRepository;
 import com.example.zerobaselogin.user.entity.User;
 import com.example.zerobaselogin.user.exception.ExistsEmailException;
@@ -31,6 +33,7 @@ public class ApiUserController {
 
     private final UserRepository userRepository;
     private final NoticeRepository noticeRepository;
+    private final NoticeLikeRepository noticeLikeRepository;
 
     // 예외 처리
 //    @PostMapping("/api/user")
@@ -291,5 +294,17 @@ public class ApiUserController {
     void sendSMS(String message) {
         System.out.println("[문자메시지전송]");
         System.out.println(message);
+    }
+
+    // 본인이 좋아요한 공지사항 보는 API
+    @GetMapping("/api/user/{id}/notice/like")
+    public List<NoticeLike> likeNotice(@PathVariable("id") Long id) {
+
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new UserNotFoundException("사용자 정보가 없습니다."));
+
+        List<NoticeLike> noticeLikeList = noticeLikeRepository.findByUser(user);
+
+        return noticeLikeList;
     }
 }

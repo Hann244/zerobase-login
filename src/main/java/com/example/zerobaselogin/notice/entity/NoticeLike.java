@@ -22,4 +22,8 @@ public class NoticeLike {
     @ManyToOne
     private Notice notice;
 
+    @JoinColumn
+    @ManyToOne
+    private User user;
+
 }
