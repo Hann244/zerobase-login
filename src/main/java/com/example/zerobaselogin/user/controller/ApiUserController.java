@@ -15,6 +15,7 @@ import com.example.zerobaselogin.user.model.Userupdate;
 import com.example.zerobaselogin.user.repository.UserRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -75,6 +76,7 @@ public class ApiUserController {
     }
      */
 
+    // 회원정보 수정
     @PutMapping("/api/user/{id}")
     public ResponseEntity<?> updateUser(@PathVariable("id") Long id,
                                                       @RequestBody @Valid Userupdate userupdate,
@@ -225,5 +227,26 @@ public class ApiUserController {
         userRepository.save(user);
 
         return ResponseEntity.ok().build();
+    }
+
+    // 회원탈퇴
+    @DeleteMapping("/api/user/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable("id") Long id) {
+
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new UserNotFoundException("사용자 정보가 없습니다."));
+
+        try {
+            userRepository.delete(user);
+        } catch (DataIntegrityViolationException e) {
+            String message = "제약조건에 문제가 발생하였습니다.";
+            return new ResponseEntity<>(message, HttpStatus.BAD_REQUEST);
+        } catch (Exception e) {
+            String message = "회원 탈퇴 중 문제가 발생하였습니다.";
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
+        return ResponseEntity.ok().build();
+
     }
 }
