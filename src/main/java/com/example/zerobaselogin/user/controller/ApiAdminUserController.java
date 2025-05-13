@@ -2,10 +2,12 @@ package com.example.zerobaselogin.user.controller;
 
 import com.example.zerobaselogin.notice.repository.NoticeRepository;
 import com.example.zerobaselogin.user.entity.User;
+import com.example.zerobaselogin.user.entity.UserLoginHistory;
 import com.example.zerobaselogin.user.exception.UserNotFoundException;
 import com.example.zerobaselogin.user.model.ResponseMessage;
 import com.example.zerobaselogin.user.model.UserSearch;
 import com.example.zerobaselogin.user.model.UserStatusInput;
+import com.example.zerobaselogin.user.repository.UserLoginHistoryRepository;
 import com.example.zerobaselogin.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -21,6 +23,7 @@ public class ApiAdminUserController {
 
     private final UserRepository userRepository;
     private final NoticeRepository noticeRepository;
+    private final UserLoginHistoryRepository userLoginHistoryRepository;
 
     // 사용자 목록과 사용자 수를 구하는 API
 //    @GetMapping("/api/admin/user")
@@ -96,6 +99,15 @@ public class ApiAdminUserController {
         userRepository.delete(user);
 
         return ResponseEntity.ok().build();
+    }
+
+    // 접속 이력 조회 API
+    @GetMapping("/api/admin/user/{id}/login/history")
+    public ResponseEntity<?> userLoginHistory(@PathVariable("id") Long id) {
+        List<UserLoginHistory> userLoginHistories = userLoginHistoryRepository.findAll();
+
+        return ResponseEntity.ok().body(userLoginHistories);
+
     }
 
 
