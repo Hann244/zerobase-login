@@ -8,10 +8,7 @@ import com.example.zerobaselogin.user.exception.ExistsEmailException;
 import com.example.zerobaselogin.user.exception.PasswordNotMatchException;
 import com.example.zerobaselogin.user.exception.UserNotFoundException;
 import com.example.zerobaselogin.notice.model.ResponseError;
-import com.example.zerobaselogin.user.model.UserInput;
-import com.example.zerobaselogin.user.model.UserInputPassword;
-import com.example.zerobaselogin.user.model.UserResponse;
-import com.example.zerobaselogin.user.model.Userupdate;
+import com.example.zerobaselogin.user.model.*;
 import com.example.zerobaselogin.user.repository.UserRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -248,5 +245,17 @@ public class ApiUserController {
 
         return ResponseEntity.ok().build();
 
+    }
+
+    // 아이디 찾기
+    @GetMapping("/api/user")
+    public ResponseEntity<?> findUser(@RequestBody UserInputFind userInputFind) {
+
+        User user = userRepository.findByUserNameAndPhone(userInputFind.getUserName(), userInputFind.getPhone())
+                .orElseThrow(() -> new UserNotFoundException("사용자 정보가 없습니다."));
+
+        UserResponse userResponse = UserResponse.of(user);
+
+        return ResponseEntity.ok().body(userResponse);
     }
 }
