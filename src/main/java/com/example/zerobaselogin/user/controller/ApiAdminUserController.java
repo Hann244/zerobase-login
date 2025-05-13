@@ -1,16 +1,16 @@
 package com.example.zerobaselogin.user.controller;
 
+import com.example.zerobaselogin.notice.repository.NoticeRepository;
 import com.example.zerobaselogin.user.entity.User;
+import com.example.zerobaselogin.user.exception.UserNotFoundException;
 import com.example.zerobaselogin.user.model.ResponseMessage;
 import com.example.zerobaselogin.user.model.UserSearch;
+import com.example.zerobaselogin.user.model.UserStatusInput;
 import com.example.zerobaselogin.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -20,6 +20,7 @@ import java.util.Optional;
 public class ApiAdminUserController {
 
     private final UserRepository userRepository;
+    private final NoticeRepository noticeRepository;
 
     // 사용자 목록과 사용자 수를 구하는 API
 //    @GetMapping("/api/admin/user")
@@ -61,4 +62,41 @@ public class ApiAdminUserController {
 
         return ResponseEntity.ok().body(ResponseMessage.success(userList));
     }
+
+    // 사용자 상태 변경 API
+    @PatchMapping("/api/admin/user/{id}/status")
+    public ResponseEntity<?> userStatus(@PathVariable("id") Long id, @RequestBody UserStatusInput userStatusInput) {
+
+        Optional<User> optionalUser = userRepository.findById(id);
+        if (!optionalUser.isPresent()) {
+            return new ResponseEntity<>(ResponseMessage.fail("사용자 정보가 존재하지 않습니다."), HttpStatus.BAD_REQUEST);
+        }
+
+        User user = optionalUser.get();
+
+        user.setStatus(userStatusInput.getStatus());
+        userRepository.save(user);
+
+        return ResponseEntity.ok().build();
+
+    }
+
+    // 사용자 정보 삭제 API
+    @DeleteMapping("/api/admin/user/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable("id") Long id) {
+        Optional<User> optionalUser = userRepository.findById(id);
+        if (!optionalUser.isPresent()) {
+            return new ResponseEntity<>(ResponseMessage.fail("사용자 정보가 존재하지 않습니다."), HttpStatus.BAD_REQUEST);
+        }
+
+        User user = optionalUser.get();
+        if (noticeRepository.countByUser(user) > 0) {
+            return new ResponseEntity<>(ResponseMessage.fail("사용자가 작성한 공지사항이 있습니다."), HttpStatus.BAD_REQUEST);
+        }
+        userRepository.delete(user);
+
+        return ResponseEntity.ok().build();
+    }
+
+
 }

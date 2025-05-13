@@ -1,5 +1,6 @@
 package com.example.zerobaselogin.user.entity;
 
+import com.example.zerobaselogin.user.model.UserStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -37,4 +38,7 @@ public class User {
 
     @Column
     private LocalDateTime updateDate;
+
+    @Column
+    private UserStatus status;
 }
