@@ -1,5 +1,6 @@
 package com.example.zerobaselogin.board.controller;
 
+import com.example.zerobaselogin.board.entity.BoardType;
 import com.example.zerobaselogin.board.model.BoardTypeInput;
 import com.example.zerobaselogin.board.model.ServiceResult;
 import com.example.zerobaselogin.board.service.BoardService;
@@ -69,6 +70,15 @@ public class ApiBoardController {
         }
 
         return ResponseEntity.ok().body(ResponseMessage.success());
+
+    }
+
+    // 게시판 목록 리턴 API
+    @GetMapping("/type")
+    public ResponseEntity<?> boardType() {
+        List<BoardType> boardTypeList = boardService.getAllBoardType();
+
+        return ResponseEntity.ok().body(ResponseMessage.success(boardTypeList));
 
     }
 
