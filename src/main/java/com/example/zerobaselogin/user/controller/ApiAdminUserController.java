@@ -164,4 +164,13 @@ public class ApiAdminUserController {
 
         return ResponseEntity.ok().body(ResponseMessage.success(userSummary));
     }
+
+    // 오늘 가입한 사용자 목록 API
+    @GetMapping("/api/admin/user/today")
+    public ResponseEntity<?> todayUser() {
+
+        List<User> users = userService.getTodayUsers();
+
+        return ResponseEntity.ok().body(ResponseMessage.success(users));
+    }
 }
