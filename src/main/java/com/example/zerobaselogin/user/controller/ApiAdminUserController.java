@@ -7,8 +7,10 @@ import com.example.zerobaselogin.user.exception.UserNotFoundException;
 import com.example.zerobaselogin.user.model.ResponseMessage;
 import com.example.zerobaselogin.user.model.UserSearch;
 import com.example.zerobaselogin.user.model.UserStatusInput;
+import com.example.zerobaselogin.user.model.UserSummary;
 import com.example.zerobaselogin.user.repository.UserLoginHistoryRepository;
 import com.example.zerobaselogin.user.repository.UserRepository;
+import com.example.zerobaselogin.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +26,8 @@ public class ApiAdminUserController {
     private final UserRepository userRepository;
     private final NoticeRepository noticeRepository;
     private final UserLoginHistoryRepository userLoginHistoryRepository;
+
+    private final UserService userService;
 
     // 사용자 목록과 사용자 수를 구하는 API
 //    @GetMapping("/api/admin/user")
@@ -150,5 +154,14 @@ public class ApiAdminUserController {
 
         return ResponseEntity.ok().body(ResponseMessage.success());
 
+    }
+
+    // 회원 전체수와 상태별 회원수에 대한 정보를 리턴하는 API
+    @GetMapping("/api/admin/user/status/count")
+    public ResponseEntity<?> userStatusCount() {
+
+        UserSummary userSummary = userService.getUserStatusCount();
+
+        return ResponseEntity.ok().body(ResponseMessage.success(userSummary));
     }
 }
