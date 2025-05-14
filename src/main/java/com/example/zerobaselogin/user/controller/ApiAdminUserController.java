@@ -4,10 +4,7 @@ import com.example.zerobaselogin.notice.repository.NoticeRepository;
 import com.example.zerobaselogin.user.entity.User;
 import com.example.zerobaselogin.user.entity.UserLoginHistory;
 import com.example.zerobaselogin.user.exception.UserNotFoundException;
-import com.example.zerobaselogin.user.model.ResponseMessage;
-import com.example.zerobaselogin.user.model.UserSearch;
-import com.example.zerobaselogin.user.model.UserStatusInput;
-import com.example.zerobaselogin.user.model.UserSummary;
+import com.example.zerobaselogin.user.model.*;
 import com.example.zerobaselogin.user.repository.UserLoginHistoryRepository;
 import com.example.zerobaselogin.user.repository.UserRepository;
 import com.example.zerobaselogin.user.service.UserService;
@@ -172,5 +169,14 @@ public class ApiAdminUserController {
         List<User> users = userService.getTodayUsers();
 
         return ResponseEntity.ok().body(ResponseMessage.success(users));
+    }
+
+    // 사용자별 공지사항의 게시글 수 리턴하는 API
+    @GetMapping("/api/admin/user/notice/count")
+    public ResponseEntity<?> userNoticeCount() {
+
+        List<UserNoticeCount> userNoticeCountList = userService.getUserNoticeCount();
+
+        return ResponseEntity.ok().body(ResponseMessage.success(userNoticeCountList));
     }
 }
