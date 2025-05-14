@@ -2,6 +2,7 @@ package com.example.zerobaselogin.board.controller;
 
 import com.example.zerobaselogin.board.entity.BoardType;
 import com.example.zerobaselogin.board.model.BoardTypeInput;
+import com.example.zerobaselogin.board.model.BoardTypeUsing;
 import com.example.zerobaselogin.board.model.ServiceResult;
 import com.example.zerobaselogin.board.service.BoardService;
 import com.example.zerobaselogin.notice.model.ResponseError;
@@ -81,5 +82,20 @@ public class ApiBoardController {
         return ResponseEntity.ok().body(ResponseMessage.success(boardTypeList));
 
     }
+
+    // 게시판 타입의 사용여부를 설정하는 API
+    @PatchMapping("/type/{id}/using")
+    public ResponseEntity<?> usingBoardType(@PathVariable("id") Long id, @RequestBody BoardTypeUsing boardTypeUsing) {
+        ServiceResult result = boardService.setBoardTypeUsing(id, boardTypeUsing);
+
+        if (!result.isResult()) {
+            return ResponseEntity.ok().body(ResponseMessage.fail(result.getMessage()));
+        }
+
+        return ResponseEntity.ok().body(ResponseMessage.success());
+
+    }
+
+
 
 }
