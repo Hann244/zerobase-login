@@ -58,4 +58,18 @@ public class ApiBoardController {
         return ResponseEntity.ok().build();
     }
 
+    // 게시판 타입을 삭제하는 API
+    @DeleteMapping("/type/{id}")
+    public ResponseEntity<?> deleteBoardType(@PathVariable("id") Long id) {
+
+        ServiceResult result = boardService.deleteBoard(id);
+
+        if (!result.isResult()) {
+            return ResponseEntity.ok().body(ResponseMessage.fail(result.getMessage()));
+        }
+
+        return ResponseEntity.ok().body(ResponseMessage.success());
+
+    }
+
 }

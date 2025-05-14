@@ -3,6 +3,7 @@ package com.example.zerobaselogin.board.service;
 import com.example.zerobaselogin.board.entity.BoardType;
 import com.example.zerobaselogin.board.model.BoardTypeInput;
 import com.example.zerobaselogin.board.model.ServiceResult;
+import com.example.zerobaselogin.board.repository.BoardRepository;
 import com.example.zerobaselogin.board.repository.BoardTypeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,7 @@ import java.util.Optional;
 public class BoardServiceImpl implements BoardService {
 
     private final BoardTypeRepository boardTypeRepository;
+    private final BoardRepository boardRepository;
 
     @Override
     public ServiceResult addBoard(BoardTypeInput boardTypeInput) {
@@ -56,6 +58,24 @@ public class BoardServiceImpl implements BoardService {
         boardType.setBoardName(boardTypeInput.getName());
         boardType.setUpdateDate(LocalDateTime.now());
         boardTypeRepository.save(boardType);
+
+        return ServiceResult.success();
+    }
+
+    @Override
+    public ServiceResult deleteBoard(Long id) {
+
+        Optional<BoardType> optionalBoardType = boardTypeRepository.findById(id);
+        if (!optionalBoardType.isPresent()) {
+            return ServiceResult.fail("삭제할 게시판타입이 없습니다.");
+        }
+
+        BoardType boardType = optionalBoardType.get();
+        if (boardRepository.countByBoardType(boardType) > 0) {
+            return ServiceResult.fail("삭제할 게시판타입의 게시글이 존재합니다.");
+        }
+
+        boardTypeRepository.delete(boardType);
 
         return ServiceResult.success();
     }
