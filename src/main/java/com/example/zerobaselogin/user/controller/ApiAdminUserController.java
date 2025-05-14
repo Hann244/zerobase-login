@@ -179,4 +179,14 @@ public class ApiAdminUserController {
 
         return ResponseEntity.ok().body(ResponseMessage.success(userNoticeCountList));
     }
+
+
+    // 사용자별 게시글 수와 좋아요 수를 리턴하는 API
+    @GetMapping("/api/admin/user/log/count")
+    public ResponseEntity<?> userLogCount() {
+        List<UserLogCount> userLogCounts = userService.getUserLogCount();
+
+        return ResponseEntity.ok().body(ResponseMessage.success(userLogCounts));
+
+    }
 }

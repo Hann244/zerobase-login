@@ -1,6 +1,7 @@
 package com.example.zerobaselogin.user.service;
 
 import com.example.zerobaselogin.user.entity.User;
+import com.example.zerobaselogin.user.model.UserLogCount;
 import com.example.zerobaselogin.user.model.UserNoticeCount;
 import com.example.zerobaselogin.user.model.UserStatus;
 import com.example.zerobaselogin.user.model.UserSummary;
@@ -47,5 +48,10 @@ public class UserServiceImpl implements UserService {
     public List<UserNoticeCount> getUserNoticeCount() {
 
         return userCustomeRepository.findUserNoticeCount();
+    }
+
+    @Override
+    public List<UserLogCount> getUserLogCount() {
+        return userCustomeRepository.findUserLogCount();
     }
 }
