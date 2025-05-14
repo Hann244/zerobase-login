@@ -32,8 +32,11 @@ public class Board {
     private String title;
 
     @Column
-    private String content;
+    private String contents;
 
     @Column
     private LocalDateTime regDate;
+
+    @Column
+    private boolean topYn;
 }
