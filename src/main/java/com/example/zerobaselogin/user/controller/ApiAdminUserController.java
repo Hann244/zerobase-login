@@ -4,11 +4,10 @@ import com.example.zerobaselogin.notice.repository.NoticeRepository;
 import com.example.zerobaselogin.user.entity.User;
 import com.example.zerobaselogin.user.entity.UserLoginHistory;
 import com.example.zerobaselogin.user.exception.UserNotFoundException;
-import com.example.zerobaselogin.user.model.ResponseMessage;
-import com.example.zerobaselogin.user.model.UserSearch;
-import com.example.zerobaselogin.user.model.UserStatusInput;
+import com.example.zerobaselogin.user.model.*;
 import com.example.zerobaselogin.user.repository.UserLoginHistoryRepository;
 import com.example.zerobaselogin.user.repository.UserRepository;
+import com.example.zerobaselogin.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +23,8 @@ public class ApiAdminUserController {
     private final UserRepository userRepository;
     private final NoticeRepository noticeRepository;
     private final UserLoginHistoryRepository userLoginHistoryRepository;
+
+    private final UserService userService;
 
     // 사용자 목록과 사용자 수를 구하는 API
 //    @GetMapping("/api/admin/user")
@@ -150,5 +151,51 @@ public class ApiAdminUserController {
 
         return ResponseEntity.ok().body(ResponseMessage.success());
 
+    }
+
+    // 회원 전체수와 상태별 회원수에 대한 정보를 리턴하는 API
+    @GetMapping("/api/admin/user/status/count")
+    public ResponseEntity<?> userStatusCount() {
+
+        UserSummary userSummary = userService.getUserStatusCount();
+
+        return ResponseEntity.ok().body(ResponseMessage.success(userSummary));
+    }
+
+    // 오늘 가입한 사용자 목록 API
+    @GetMapping("/api/admin/user/today")
+    public ResponseEntity<?> todayUser() {
+
+        List<User> users = userService.getTodayUsers();
+
+        return ResponseEntity.ok().body(ResponseMessage.success(users));
+    }
+
+    // 사용자별 공지사항의 게시글 수 리턴하는 API
+    @GetMapping("/api/admin/user/notice/count")
+    public ResponseEntity<?> userNoticeCount() {
+
+        List<UserNoticeCount> userNoticeCountList = userService.getUserNoticeCount();
+
+        return ResponseEntity.ok().body(ResponseMessage.success(userNoticeCountList));
+    }
+
+
+    // 사용자별 게시글 수와 좋아요 수를 리턴하는 API
+    @GetMapping("/api/admin/user/log/count")
+    public ResponseEntity<?> userLogCount() {
+        List<UserLogCount> userLogCounts = userService.getUserLogCount();
+
+        return ResponseEntity.ok().body(ResponseMessage.success(userLogCounts));
+
+    }
+
+    // 좋아요를 가장 많이한 사용자 목록(10개)을 리턴하는 API
+    @GetMapping("/api/admin/user/like/best")
+    public ResponseEntity<?> bestLikeCount() {
+
+        List<UserLogCount> userLogCounts = userService.getUserLikeBest();
+
+        return ResponseEntity.ok().body(ResponseMessage.success(userLogCounts));
     }
 }
