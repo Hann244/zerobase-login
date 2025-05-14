@@ -1,6 +1,7 @@
 package com.example.zerobaselogin.board.controller;
 
 import com.example.zerobaselogin.board.entity.BoardType;
+import com.example.zerobaselogin.board.model.BoardTypeCount;
 import com.example.zerobaselogin.board.model.BoardTypeInput;
 import com.example.zerobaselogin.board.model.BoardTypeUsing;
 import com.example.zerobaselogin.board.model.ServiceResult;
@@ -96,6 +97,13 @@ public class ApiBoardController {
 
     }
 
-
+    // 게시판별 작성된 게시글의 개수를 리턴하는 API -> 버전 차이
+//    @GetMapping("/type/count")
+//    public ResponseEntity<?> boardTypeCount() {
+//
+//        List<BoardTypeCount> list = boardService.getBoardTypeCount();
+//        return ResponseEntity.ok().body(list);
+//
+//    }
 
 }

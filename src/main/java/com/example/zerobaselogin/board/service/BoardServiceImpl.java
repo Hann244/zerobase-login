@@ -1,9 +1,11 @@
 package com.example.zerobaselogin.board.service;
 
 import com.example.zerobaselogin.board.entity.BoardType;
+import com.example.zerobaselogin.board.model.BoardTypeCount;
 import com.example.zerobaselogin.board.model.BoardTypeInput;
 import com.example.zerobaselogin.board.model.BoardTypeUsing;
 import com.example.zerobaselogin.board.model.ServiceResult;
+import com.example.zerobaselogin.board.repository.BoardTypeCustomRepository;
 import com.example.zerobaselogin.board.repository.BoardRepository;
 import com.example.zerobaselogin.board.repository.BoardTypeRepository;
 import lombok.RequiredArgsConstructor;
@@ -19,6 +21,7 @@ public class BoardServiceImpl implements BoardService {
 
     private final BoardTypeRepository boardTypeRepository;
     private final BoardRepository boardRepository;
+    private final BoardTypeCustomRepository boardTypeCustomRepository;
 
     @Override
     public ServiceResult addBoard(BoardTypeInput boardTypeInput) {
@@ -102,4 +105,10 @@ public class BoardServiceImpl implements BoardService {
 
         return ServiceResult.success();
     }
+
+//    @Override
+//    public List<BoardTypeCount> getBoardTypeCount() {
+//
+//        return boardTypeCustomRepository.getBoardTypeCount();
+//    }
 }

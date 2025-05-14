@@ -1,6 +1,7 @@
 package com.example.zerobaselogin.board.service;
 
 import com.example.zerobaselogin.board.entity.BoardType;
+import com.example.zerobaselogin.board.model.BoardTypeCount;
 import com.example.zerobaselogin.board.model.BoardTypeInput;
 import com.example.zerobaselogin.board.model.BoardTypeUsing;
 import com.example.zerobaselogin.board.model.ServiceResult;
@@ -20,4 +21,7 @@ public interface BoardService {
 
     // 게시판 타입의 사용여부 설정
     ServiceResult setBoardTypeUsing(Long id, BoardTypeUsing boardTypeUsing);
+
+    // 게시판 타입의 게시글 수를 리턴
+    //List<BoardTypeCount> getBoardTypeCount();
 }
