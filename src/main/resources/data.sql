@@ -24,3 +24,13 @@ VALUES (3, 1)
      , (3, 2)
      , (1, 4)
      , (2, 4);
+
+INSERT INTO BOARD_TYPE (BOARD_NAME, REG_DATE, USING_YN)
+VALUES ('게시판1', '2021-02-01 01:12:37.000000', 1)
+     , ('게시판2', '2021-02-01 01:12:37.000000', 1);
+
+
+INSERT INTO BOARD (BOARD_TYPE_ID, USER_ID, TITLE, CONTENTS, REG_DATE, TOP_YN)
+VALUES (1, 1, '게시글1', '게시글내용1', '2021-02-01 01:12:37.000000', 0)
+     , (1, 1, '게시글2', '게시글내용2', '2021-02-01 01:12:37.000000', 0);
+

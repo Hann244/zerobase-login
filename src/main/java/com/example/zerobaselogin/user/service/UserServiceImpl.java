@@ -5,7 +5,7 @@ import com.example.zerobaselogin.user.model.UserLogCount;
 import com.example.zerobaselogin.user.model.UserNoticeCount;
 import com.example.zerobaselogin.user.model.UserStatus;
 import com.example.zerobaselogin.user.model.UserSummary;
-import com.example.zerobaselogin.user.repository.UserCustomeRepository;
+import com.example.zerobaselogin.user.repository.UserCustomRepository;
 import com.example.zerobaselogin.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -18,7 +18,7 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
-    private final UserCustomeRepository userCustomeRepository;
+    private final UserCustomRepository userCustomRepository;
 
     @Override
     public UserSummary getUserStatusCount() {
@@ -47,16 +47,16 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserNoticeCount> getUserNoticeCount() {
 
-        return userCustomeRepository.findUserNoticeCount();
+        return userCustomRepository.findUserNoticeCount();
     }
 
     @Override
     public List<UserLogCount> getUserLogCount() {
-        return userCustomeRepository.findUserLogCount();
+        return userCustomRepository.findUserLogCount();
     }
 
     @Override
     public List<UserLogCount> getUserLikeBest() {
-        return userCustomeRepository.findUserLikeBest();
+        return userCustomRepository.findUserLikeBest();
     }
 }
