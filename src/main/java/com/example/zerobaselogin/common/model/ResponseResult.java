@@ -19,7 +19,7 @@ public class ResponseResult {
     }
 
 
-    public static ResponseEntity<?> succeess(List<BoardBadReport> data) {
+    public static ResponseEntity<?> succeess(Object data) {
         return ResponseEntity.ok().body(data);
     }
 

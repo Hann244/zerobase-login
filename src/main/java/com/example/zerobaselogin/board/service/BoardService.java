@@ -1,5 +1,6 @@
 package com.example.zerobaselogin.board.service;
 
+import com.example.zerobaselogin.board.entity.Board;
 import com.example.zerobaselogin.board.entity.BoardBadReport;
 import com.example.zerobaselogin.board.entity.BoardType;
 import com.example.zerobaselogin.board.model.*;
@@ -52,6 +53,9 @@ public interface BoardService {
 
     // 북마크 삭제
     ServiceResult removeBookmark(Long id, String email);
+
+    // 본인이 작성한 게시글 리턴
+    List<Board> postList(String email);
 
     // 게시판 타입의 게시글 수를 리턴
     //List<BoardTypeCount> getBoardTypeCount();

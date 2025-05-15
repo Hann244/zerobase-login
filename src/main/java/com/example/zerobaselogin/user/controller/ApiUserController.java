@@ -2,7 +2,11 @@ package com.example.zerobaselogin.user.controller;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.exceptions.SignatureVerificationException;
+import com.example.zerobaselogin.board.entity.Board;
+import com.example.zerobaselogin.board.service.BoardService;
+import com.example.zerobaselogin.common.model.ResponseResult;
 import com.example.zerobaselogin.notice.entity.Notice;
 import com.example.zerobaselogin.notice.entity.NoticeLike;
 import com.example.zerobaselogin.notice.model.NoticeResponse;
@@ -41,6 +45,8 @@ public class ApiUserController {
     private final UserRepository userRepository;
     private final NoticeRepository noticeRepository;
     private final NoticeLikeRepository noticeLikeRepository;
+
+    private final BoardService boardService;
 
     // 예외 처리
 //    @PostMapping("/api/user")
@@ -469,5 +475,20 @@ public class ApiUserController {
 
         return ResponseEntity.ok().build();
 
+    }
+
+    // 본인이 작성한 게시글 목록을 조회
+    @GetMapping("/api/user/board/post")
+    public ResponseEntity<?> myPost(@RequestHeader("F-TOKEN") String token) {
+
+        String email = "";
+        try {
+            email = JWTUtils.getIssuer(token);
+        } catch (JWTVerificationException e) {
+            return ResponseResult.fail("토큰 정보가 정확하지 않습니다.");
+        }
+
+        List<Board> list = boardService.postList(email);
+        return ResponseResult.succeess(list);
     }
 }

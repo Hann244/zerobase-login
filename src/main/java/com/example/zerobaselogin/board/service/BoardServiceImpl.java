@@ -3,6 +3,7 @@ package com.example.zerobaselogin.board.service;
 import com.example.zerobaselogin.board.entity.*;
 import com.example.zerobaselogin.board.model.*;
 import com.example.zerobaselogin.board.repository.*;
+import com.example.zerobaselogin.common.exception.BizException;
 import com.example.zerobaselogin.user.entity.User;
 import com.example.zerobaselogin.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -373,6 +374,19 @@ public class BoardServiceImpl implements BoardService {
 
         boardBookmarkRepository.delete(boardBookmark);
         return ServiceResult.success();
+    }
+
+    @Override
+    public List<Board> postList(String email) {
+
+        Optional<User> optionalUser = userRepository.findByEmail(email);
+        if (!optionalUser.isPresent()) {
+            throw new BizException("회원 정보가 존재하지 않습니다.");
+        }
+        User user = optionalUser.get();
+
+        List<Board> list = boardRepository.findByUser(user);
+        return list;
     }
 
 //    @Override
