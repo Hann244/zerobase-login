@@ -6,6 +6,7 @@ import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.exceptions.SignatureVerificationException;
 import com.example.zerobaselogin.board.entity.Board;
 import com.example.zerobaselogin.board.entity.BoardComment;
+import com.example.zerobaselogin.board.model.ServiceResult;
 import com.example.zerobaselogin.board.service.BoardService;
 import com.example.zerobaselogin.common.model.ResponseResult;
 import com.example.zerobaselogin.notice.entity.Notice;
@@ -20,6 +21,7 @@ import com.example.zerobaselogin.user.exception.UserNotFoundException;
 import com.example.zerobaselogin.notice.model.ResponseError;
 import com.example.zerobaselogin.user.model.*;
 import com.example.zerobaselogin.user.repository.UserRepository;
+import com.example.zerobaselogin.user.service.PointService;
 import com.example.zerobaselogin.util.JWTUtils;
 import com.example.zerobaselogin.util.PasswordUtils;
 import jakarta.servlet.http.HttpServletRequest;
@@ -48,6 +50,7 @@ public class ApiUserController {
     private final NoticeLikeRepository noticeLikeRepository;
 
     private final BoardService boardService;
+    private final PointService pointService;
 
     // 예외 처리
 //    @PostMapping("/api/user")
@@ -506,5 +509,21 @@ public class ApiUserController {
 
         List<BoardComment> list = boardService.commentList(email);
         return ResponseResult.succeess(list);
+    }
+
+    // 게시글 작성 시 포인트를 누적하는 API
+    @PostMapping("/api/user/point")
+    public ResponseEntity<?> userPoint(@RequestHeader("F-TOKEN") String token,
+                                       @RequestBody UserPointInput userPointInput) {
+
+        String email = "";
+        try {
+            email = JWTUtils.getIssuer(token);
+        } catch (JWTVerificationException e) {
+            return ResponseResult.fail("토큰 정보가 정확하지 않습니다.");
+        }
+
+        ServiceResult result = pointService.addPoint(email, userPointInput);
+        return ResponseResult.result(result);
     }
 }
