@@ -31,4 +31,20 @@ public class ApiUserInterestController {
         return ResponseResult.result(result);
 
     }
+
+    // 관심 사용자에서 관심 사용자를 삭제하는 API
+    @DeleteMapping("/interest/{id}")
+    public ResponseEntity<?> DeleteInterestUser(@PathVariable("id") Long id,
+                                          @RequestHeader("F-TOKEN") String token) {
+        String email = "";
+        try {
+            email = JWTUtils.getIssuer(token);
+        } catch (JWTVerificationException e) {
+            return ResponseResult.fail("토큰 정보가 정확하지 않습니다.");
+        }
+
+        ServiceResult result = userService.removeInterestUser(email, id);
+        return ResponseResult.result(result);
+
+    }
 }
