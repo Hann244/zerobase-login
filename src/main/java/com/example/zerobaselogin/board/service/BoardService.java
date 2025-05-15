@@ -1,5 +1,6 @@
 package com.example.zerobaselogin.board.service;
 
+import com.example.zerobaselogin.board.entity.BoardBadReport;
 import com.example.zerobaselogin.board.entity.BoardType;
 import com.example.zerobaselogin.board.model.*;
 import jakarta.validation.Valid;
@@ -36,6 +37,9 @@ public interface BoardService {
 
     // 게시글을 신고하는 기능
     ServiceResult addBadReport(Long id, String email, BoardBadReportInput boardBadReportInput);
+
+    // 신고된 게시글 정보 목록
+    List<BoardBadReport> badReportList();
 
     // 게시판 타입의 게시글 수를 리턴
     //List<BoardTypeCount> getBoardTypeCount();
