@@ -23,7 +23,7 @@ public interface BoardService {
     ServiceResult setBoardTypeUsing(Long id, BoardTypeUsing boardTypeUsing);
 
     // 게시글을 최상단에 배치
-    ServiceResult setBoardTop(Long id);
+    ServiceResult setBoardTop(Long id, boolean flag);
 
     // 게시판 타입의 게시글 수를 리턴
     //List<BoardTypeCount> getBoardTypeCount();

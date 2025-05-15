@@ -109,8 +109,14 @@ public class ApiBoardController {
     // 게시된 게시글을 최상단에 배치하는 API
     @PatchMapping("/{id}/top")
     public ResponseEntity<?> boardPostTop(@PathVariable("id") Long id) {
-        ServiceResult result = boardService.setBoardTop(id);
+        ServiceResult result = boardService.setBoardTop(id, true);
         return ResponseEntity.ok().body(result);
     }
 
+    // 게시된 게시글을 최상단에서 해제하는 API
+    @PatchMapping("/{id}/top/clear")
+    public ResponseEntity<?> boardPostTopClear(@PathVariable("id") Long id) {
+        ServiceResult result = boardService.setBoardTop(id, false);
+        return ResponseEntity.ok().body(result);
+    }
 }
