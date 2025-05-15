@@ -41,6 +41,9 @@ public interface BoardService {
     // 신고된 게시글 정보 목록
     List<BoardBadReport> badReportList();
 
+    // 게시글을 스크랩함
+    ServiceResult scrapBoard(Long id, String email);
+
     // 게시판 타입의 게시글 수를 리턴
     //List<BoardTypeCount> getBoardTypeCount();
 }
