@@ -47,6 +47,12 @@ public interface BoardService {
     // 게시글 스크랩 삭제
     ServiceResult removeScrap(Long id, String email);
 
+    // 북마크 추가
+    ServiceResult addBookmark(Long id, String email);
+
+    // 북마크 삭제
+    ServiceResult removeBookmark(Long id, String email);
+
     // 게시판 타입의 게시글 수를 리턴
     //List<BoardTypeCount> getBoardTypeCount();
 }
