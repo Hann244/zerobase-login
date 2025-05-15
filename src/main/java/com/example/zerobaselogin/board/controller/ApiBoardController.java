@@ -154,4 +154,19 @@ public class ApiBoardController {
         return ResponseResult.succeess();
 
     }
+
+    // 게시글에 대한 좋아요하기 기능을 수행하는 API
+    @PutMapping("/{id}/like")
+    public ResponseEntity<?> boardLike(@PathVariable("id") Long id,
+                          @RequestHeader("F-TOKEN") String token) {
+        String email = "";
+        try {
+            email = JWTUtils.getIssuer(token);
+        } catch (JWTVerificationException e) {
+            return ResponseResult.fail("토큰 정보가 정확하지 않습니다.");
+        }
+
+        ServiceResult result = boardService.setBoardLike(id, email);
+        return ResponseResult.result(result);
+    }
 }
