@@ -1,13 +1,16 @@
 package com.example.zerobaselogin.board.controller;
 
 import com.auth0.jwt.exceptions.JWTVerificationException;
+import com.example.zerobaselogin.board.entity.Board;
 import com.example.zerobaselogin.board.entity.BoardType;
 import com.example.zerobaselogin.board.model.*;
 import com.example.zerobaselogin.board.service.BoardService;
+import com.example.zerobaselogin.common.exception.BizException;
 import com.example.zerobaselogin.common.model.ResponseResult;
 import com.example.zerobaselogin.notice.model.ResponseError;
 import com.example.zerobaselogin.user.model.ResponseMessage;
 import com.example.zerobaselogin.util.JWTUtils;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -199,5 +202,20 @@ public class ApiBoardController {
 
         ServiceResult result = boardService.addBadReport(id, email, boardBadReportInput);
         return ResponseResult.result(result);
+    }
+
+    // AOP의 Around를 이용하여 게시판 상세 조회에 대한 히스토리 기록하는 기능
+    @GetMapping("/{id}")
+    public ResponseEntity<?> detail(@PathVariable("id") Long id) {
+
+        Board board = null;
+
+        try {
+            board = boardService.detail(id);
+        } catch (BizException e) {
+            return ResponseResult.fail(e.getMessage());
+        }
+        return ResponseResult.succeess(board);
+
     }
 }

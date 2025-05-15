@@ -215,3 +215,1011 @@ This generated password is for development use only. Your security configuration
 2025-05-15T21:11:30.274+09:00 DEBUG 10896 --- [zerobase-login] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@657d9605] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@4ef0bc5b]
 2025-05-15T21:11:30.275+09:00  INFO 10896 --- [zerobase-login] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-05-15T21:11:30.278+09:00  INFO 10896 --- [zerobase-login] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-15T21:18:15.306+09:00  INFO 5408 --- [zerobase-login] [main] c.e.z.ZerobaseLoginApplication           : Starting ZerobaseLoginApplication using Java 17.0.12 with PID 5408 (D:\develop\zerobase-login\out\production\classes started by user in D:\develop\zerobase-login)
+2025-05-15T21:18:15.320+09:00  INFO 5408 --- [zerobase-login] [main] c.e.z.ZerobaseLoginApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-05-15T21:18:16.886+09:00  INFO 5408 --- [zerobase-login] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-15T21:18:17.047+09:00  INFO 5408 --- [zerobase-login] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 15 JPA repository interfaces.
+2025-05-15T21:18:18.180+09:00  INFO 5408 --- [zerobase-login] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-15T21:18:18.205+09:00  INFO 5408 --- [zerobase-login] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-15T21:18:18.205+09:00  INFO 5408 --- [zerobase-login] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-15T21:18:18.298+09:00  INFO 5408 --- [zerobase-login] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-15T21:18:18.298+09:00  INFO 5408 --- [zerobase-login] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2821 ms
+2025-05-15T21:18:18.477+09:00  INFO 5408 --- [zerobase-login] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-15T21:18:18.769+09:00  INFO 5408 --- [zerobase-login] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-05-15T21:18:18.772+09:00  INFO 5408 --- [zerobase-login] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-15T21:18:19.019+09:00  INFO 5408 --- [zerobase-login] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-15T21:18:19.088+09:00  INFO 5408 --- [zerobase-login] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-15T21:18:19.141+09:00  INFO 5408 --- [zerobase-login] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-15T21:18:19.237+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@42ff9a77
+2025-05-15T21:18:19.238+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@42ff9a77
+2025-05-15T21:18:19.238+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@42ff9a77
+2025-05-15T21:18:19.239+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@2987d0fa
+2025-05-15T21:18:19.240+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@2987d0fa
+2025-05-15T21:18:19.240+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@13234ac9
+2025-05-15T21:18:19.241+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@13234ac9
+2025-05-15T21:18:19.242+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@7254838
+2025-05-15T21:18:19.242+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@7254838
+2025-05-15T21:18:19.242+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@39374689
+2025-05-15T21:18:19.242+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@39374689
+2025-05-15T21:18:19.243+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@39374689
+2025-05-15T21:18:19.244+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@2e204155
+2025-05-15T21:18:19.245+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@2e204155
+2025-05-15T21:18:19.245+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@2e204155
+2025-05-15T21:18:19.245+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@915d7c4
+2025-05-15T21:18:19.245+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@915d7c4
+2025-05-15T21:18:19.246+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@2513155a
+2025-05-15T21:18:19.246+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@6313b441
+2025-05-15T21:18:19.246+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@6313b441
+2025-05-15T21:18:19.246+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@47fa3671
+2025-05-15T21:18:19.246+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@60f662bd
+2025-05-15T21:18:19.247+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@5df2023c
+2025-05-15T21:18:19.247+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@5df2023c
+2025-05-15T21:18:19.247+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@5df2023c
+2025-05-15T21:18:19.248+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@23bd047f
+2025-05-15T21:18:19.248+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@23bd047f
+2025-05-15T21:18:19.249+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@23bd047f
+2025-05-15T21:18:19.249+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@3562e7c7
+2025-05-15T21:18:19.249+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@3562e7c7
+2025-05-15T21:18:19.249+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@3562e7c7
+2025-05-15T21:18:19.249+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@66d2885c
+2025-05-15T21:18:19.250+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@66d2885c
+2025-05-15T21:18:19.251+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@66d2885c
+2025-05-15T21:18:19.252+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@2bfc8558
+2025-05-15T21:18:19.252+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@2bfc8558
+2025-05-15T21:18:19.253+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@2bfc8558
+2025-05-15T21:18:19.253+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@6029f2a4
+2025-05-15T21:18:19.253+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@6029f2a4
+2025-05-15T21:18:19.253+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@42576db9
+2025-05-15T21:18:19.253+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@42576db9
+2025-05-15T21:18:19.253+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@30358dc7
+2025-05-15T21:18:19.253+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@30358dc7
+2025-05-15T21:18:19.253+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@30358dc7
+2025-05-15T21:18:19.255+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@7fac18dc
+2025-05-15T21:18:19.255+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@50bf795f
+2025-05-15T21:18:19.255+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@50bf795f
+2025-05-15T21:18:19.255+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@29fcfc54
+2025-05-15T21:18:19.255+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@353b0719
+2025-05-15T21:18:19.256+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@353b0719
+2025-05-15T21:18:19.256+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@353b0719
+2025-05-15T21:18:19.256+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@2a4e939a
+2025-05-15T21:18:19.256+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@110620d
+2025-05-15T21:18:19.256+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@4f402027
+2025-05-15T21:18:19.256+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@22aee519
+2025-05-15T21:18:19.256+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@22aee519
+2025-05-15T21:18:19.256+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@7c226095
+2025-05-15T21:18:19.256+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@7c226095
+2025-05-15T21:18:19.256+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@7ea07516
+2025-05-15T21:18:19.256+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@30af23fd
+2025-05-15T21:18:19.257+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@65fc8edc
+2025-05-15T21:18:19.257+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@a357c3e
+2025-05-15T21:18:19.257+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@7740b0ab
+2025-05-15T21:18:19.258+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@3eb9c575
+2025-05-15T21:18:19.258+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@3f322610
+2025-05-15T21:18:19.258+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@3f322610
+2025-05-15T21:18:19.258+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@1e477944
+2025-05-15T21:18:19.258+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@1e477944
+2025-05-15T21:18:19.258+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@6cf047cf
+2025-05-15T21:18:19.258+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@6cf047cf
+2025-05-15T21:18:19.258+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@1c92a549
+2025-05-15T21:18:19.258+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@1c92a549
+2025-05-15T21:18:19.259+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@323e026d
+2025-05-15T21:18:19.259+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@323e026d
+2025-05-15T21:18:19.259+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@1716c037
+2025-05-15T21:18:19.259+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@79b63325
+2025-05-15T21:18:19.259+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@708769b7
+2025-05-15T21:18:19.259+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@708769b7
+2025-05-15T21:18:19.259+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@32e830a0
+2025-05-15T21:18:19.259+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@135e49b2
+2025-05-15T21:18:19.259+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@5bb97fe7
+2025-05-15T21:18:19.259+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@10b87ff6
+2025-05-15T21:18:19.259+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@10b87ff6
+2025-05-15T21:18:19.259+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@63262071
+2025-05-15T21:18:19.259+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@2d4f67e
+2025-05-15T21:18:19.259+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@1282f784
+2025-05-15T21:18:19.260+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@1282f784
+2025-05-15T21:18:19.260+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@41167ded
+2025-05-15T21:18:19.260+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@41167ded
+2025-05-15T21:18:19.260+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@13e1e816
+2025-05-15T21:18:19.260+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@13e1e816
+2025-05-15T21:18:19.260+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@13e1e816
+2025-05-15T21:18:19.260+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@36238b12
+2025-05-15T21:18:19.260+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@36238b12
+2025-05-15T21:18:19.260+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@36238b12
+2025-05-15T21:18:19.260+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@33187485
+2025-05-15T21:18:19.261+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@41938e1e
+2025-05-15T21:18:19.261+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@5d2e6f62
+2025-05-15T21:18:19.261+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@5d2e6f62
+2025-05-15T21:18:19.261+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@77ff14ce
+2025-05-15T21:18:19.261+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@77ff14ce
+2025-05-15T21:18:19.261+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@77ff14ce
+2025-05-15T21:18:19.262+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@733fae8
+2025-05-15T21:18:19.262+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@5a8d676e
+2025-05-15T21:18:19.262+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@74764622
+2025-05-15T21:18:19.262+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@74764622
+2025-05-15T21:18:19.262+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@7ba06506
+2025-05-15T21:18:19.262+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@7ba06506
+2025-05-15T21:18:19.262+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@7ba06506
+2025-05-15T21:18:19.262+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@63dc3420
+2025-05-15T21:18:19.262+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@63dc3420
+2025-05-15T21:18:19.262+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@525b8922
+2025-05-15T21:18:19.262+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@525b8922
+2025-05-15T21:18:19.262+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@145a821d
+2025-05-15T21:18:19.264+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@145a821d
+2025-05-15T21:18:19.264+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@6caa4dc5
+2025-05-15T21:18:19.264+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@6caa4dc5
+2025-05-15T21:18:19.264+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@6ed51944
+2025-05-15T21:18:19.264+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@6ed51944
+2025-05-15T21:18:19.264+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration vector -> org.hibernate.type.BasicTypeReference@60c98f25
+2025-05-15T21:18:19.264+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float_vector -> org.hibernate.type.BasicTypeReference@20c3b34b
+2025-05-15T21:18:19.265+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double_vector -> org.hibernate.type.BasicTypeReference@1eb906f3
+2025-05-15T21:18:19.266+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte_vector -> org.hibernate.type.BasicTypeReference@58e02359
+2025-05-15T21:18:19.266+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@74fc3fc7
+2025-05-15T21:18:19.273+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@29d3d0fb
+2025-05-15T21:18:19.273+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@29d3d0fb
+2025-05-15T21:18:19.274+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@278de2b2
+2025-05-15T21:18:19.275+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@1fc1c7e
+2025-05-15T21:18:19.275+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@75cacb3e
+2025-05-15T21:18:19.275+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@61957d9c
+2025-05-15T21:18:19.277+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@29c59b6e
+2025-05-15T21:18:19.277+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@483b7dc4
+2025-05-15T21:18:19.277+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@6b8bdcc6
+2025-05-15T21:18:19.277+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@213835b6
+2025-05-15T21:18:19.277+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@24a3d414
+2025-05-15T21:18:19.570+09:00  INFO 5408 --- [zerobase-login] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-15T21:18:19.689+09:00  INFO 5408 --- [zerobase-login] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-15T21:18:19.701+09:00 DEBUG 5408 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NCharTypeDescriptor) replaced previous registration(CharTypeDescriptor)
+2025-05-15T21:18:19.702+09:00 DEBUG 5408 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NVarcharTypeDescriptor) replaced previous registration(VarcharTypeDescriptor)
+2025-05-15T21:18:19.703+09:00 DEBUG 5408 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(LongNVarcharTypeDescriptor) replaced previous registration(LongVarcharTypeDescriptor)
+2025-05-15T21:18:19.706+09:00 DEBUG 5408 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NClobTypeDescriptor(DEFAULT)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2025-05-15T21:18:19.707+09:00 DEBUG 5408 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(TimestampUtcDescriptor) replaced previous registration(TimestampUtcDescriptor)
+2025-05-15T21:18:19.714+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,3015)
+2025-05-15T21:18:19.715+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,3015)
+2025-05-15T21:18:19.715+09:00 DEBUG 5408 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,3015)
+2025-05-15T21:18:19.720+09:00 DEBUG 5408 --- [zerobase-login] [main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@5cdda548] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@4f2544b0]
+2025-05-15T21:18:21.385+09:00  INFO 5408 --- [zerobase-login] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-15T21:18:21.385+09:00 DEBUG 5408 --- [zerobase-login] [main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@5cdda548] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@68908be7]
+2025-05-15T21:18:21.390+09:00 TRACE 5408 --- [zerobase-login] [main] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@68908be7] for TypeConfiguration
+2025-05-15T21:18:21.390+09:00  INFO 5408 --- [zerobase-login] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T21:18:22.228+09:00  INFO 5408 --- [zerobase-login] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-15T21:18:23.306+09:00  WARN 5408 --- [zerobase-login] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-15T21:18:23.337+09:00  WARN 5408 --- [zerobase-login] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 647175f0-eef3-42b1-980b-339f197f2f40
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-15T21:18:23.368+09:00  INFO 5408 --- [zerobase-login] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-15T21:18:24.079+09:00  INFO 5408 --- [zerobase-login] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-05-15T21:18:24.200+09:00  INFO 5408 --- [zerobase-login] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-15T21:18:24.211+09:00  INFO 5408 --- [zerobase-login] [main] c.e.z.ZerobaseLoginApplication           : Started ZerobaseLoginApplication in 10.773 seconds (process running for 12.798)
+2025-05-15T21:18:25.464+09:00  INFO 5408 --- [zerobase-login] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-15T21:18:25.464+09:00  INFO 5408 --- [zerobase-login] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-15T21:18:25.466+09:00  INFO 5408 --- [zerobase-login] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-15T21:18:25.510+09:00  INFO 5408 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:18:25.511+09:00  INFO 5408 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:18:25.511+09:00  INFO 5408 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : 서비스 호출 전!!!!!
+2025-05-15T21:18:25.540+09:00 DEBUG 5408 --- [zerobase-login] [http-nio-8080-exec-1] org.hibernate.SQL                        : select b1_0.id,bt1_0.id,bt1_0.board_name,bt1_0.reg_date,bt1_0.update_date,bt1_0.using_yn,b1_0.contents,b1_0.publish_end_date,b1_0.publish_start_date,b1_0.reg_date,b1_0.title,b1_0.top_yn,u1_0.id,u1_0.email,u1_0.lock_yn,u1_0.password,u1_0.phone,u1_0.reg_date,u1_0.status,u1_0.update_date,u1_0.user_name from board b1_0 left join board_type bt1_0 on bt1_0.id=b1_0.board_type_id left join users u1_0 on u1_0.id=b1_0.user_id where b1_0.id=?
+2025-05-15T21:18:25.586+09:00  INFO 5408 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:18:25.586+09:00  INFO 5408 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:18:25.587+09:00  INFO 5408 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : 서비스 호출 후!!!!!
+2025-05-15T21:22:08.836+09:00  INFO 5408 --- [zerobase-login] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-15T21:22:09.029+09:00  INFO 5408 --- [zerobase-login] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-15T21:22:09.033+09:00  INFO 5408 --- [zerobase-login] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T21:22:09.034+09:00 TRACE 5408 --- [zerobase-login] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@68908be7] for TypeConfiguration
+2025-05-15T21:22:09.034+09:00 DEBUG 5408 --- [zerobase-login] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@59aa9be7] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@68908be7]
+2025-05-15T21:22:09.036+09:00  INFO 5408 --- [zerobase-login] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-15T21:22:09.039+09:00  INFO 5408 --- [zerobase-login] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-15T21:22:13.150+09:00  INFO 22196 --- [zerobase-login] [main] c.e.z.ZerobaseLoginApplication           : Starting ZerobaseLoginApplication using Java 17.0.12 with PID 22196 (D:\develop\zerobase-login\out\production\classes started by user in D:\develop\zerobase-login)
+2025-05-15T21:22:13.155+09:00  INFO 22196 --- [zerobase-login] [main] c.e.z.ZerobaseLoginApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-05-15T21:22:14.411+09:00  INFO 22196 --- [zerobase-login] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-15T21:22:14.592+09:00  INFO 22196 --- [zerobase-login] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 166 ms. Found 15 JPA repository interfaces.
+2025-05-15T21:22:15.708+09:00  INFO 22196 --- [zerobase-login] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-15T21:22:15.727+09:00  INFO 22196 --- [zerobase-login] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-15T21:22:15.728+09:00  INFO 22196 --- [zerobase-login] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-15T21:22:15.821+09:00  INFO 22196 --- [zerobase-login] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-15T21:22:15.821+09:00  INFO 22196 --- [zerobase-login] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2622 ms
+2025-05-15T21:22:16.012+09:00  INFO 22196 --- [zerobase-login] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-15T21:22:16.630+09:00  INFO 22196 --- [zerobase-login] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-05-15T21:22:16.638+09:00  INFO 22196 --- [zerobase-login] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-15T21:22:17.088+09:00  INFO 22196 --- [zerobase-login] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-15T21:22:17.235+09:00  INFO 22196 --- [zerobase-login] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-15T21:22:17.324+09:00  INFO 22196 --- [zerobase-login] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-15T21:22:17.482+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@42576db9
+2025-05-15T21:22:17.484+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@42576db9
+2025-05-15T21:22:17.485+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@42576db9
+2025-05-15T21:22:17.486+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@30358dc7
+2025-05-15T21:22:17.487+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@30358dc7
+2025-05-15T21:22:17.489+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@7fac18dc
+2025-05-15T21:22:17.489+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@7fac18dc
+2025-05-15T21:22:17.490+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@50bf795f
+2025-05-15T21:22:17.492+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@50bf795f
+2025-05-15T21:22:17.492+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@29fcfc54
+2025-05-15T21:22:17.492+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@29fcfc54
+2025-05-15T21:22:17.493+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@29fcfc54
+2025-05-15T21:22:17.495+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@353b0719
+2025-05-15T21:22:17.496+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@353b0719
+2025-05-15T21:22:17.496+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@353b0719
+2025-05-15T21:22:17.496+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@4f402027
+2025-05-15T21:22:17.496+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@4f402027
+2025-05-15T21:22:17.496+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@22aee519
+2025-05-15T21:22:17.498+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@7c226095
+2025-05-15T21:22:17.498+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@7c226095
+2025-05-15T21:22:17.498+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@7ea07516
+2025-05-15T21:22:17.499+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@30af23fd
+2025-05-15T21:22:17.499+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@65fc8edc
+2025-05-15T21:22:17.499+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@65fc8edc
+2025-05-15T21:22:17.499+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@65fc8edc
+2025-05-15T21:22:17.501+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@a357c3e
+2025-05-15T21:22:17.501+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@a357c3e
+2025-05-15T21:22:17.502+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@a357c3e
+2025-05-15T21:22:17.504+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@7740b0ab
+2025-05-15T21:22:17.505+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@7740b0ab
+2025-05-15T21:22:17.505+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@7740b0ab
+2025-05-15T21:22:17.505+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@3eb9c575
+2025-05-15T21:22:17.505+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@3eb9c575
+2025-05-15T21:22:17.505+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@3eb9c575
+2025-05-15T21:22:17.505+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@3f322610
+2025-05-15T21:22:17.506+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@3f322610
+2025-05-15T21:22:17.506+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@3f322610
+2025-05-15T21:22:17.506+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@1e477944
+2025-05-15T21:22:17.506+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@1e477944
+2025-05-15T21:22:17.506+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@6cf047cf
+2025-05-15T21:22:17.506+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@6cf047cf
+2025-05-15T21:22:17.507+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@1c92a549
+2025-05-15T21:22:17.507+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@1c92a549
+2025-05-15T21:22:17.507+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@1c92a549
+2025-05-15T21:22:17.507+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@323e026d
+2025-05-15T21:22:17.507+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@1716c037
+2025-05-15T21:22:17.507+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@1716c037
+2025-05-15T21:22:17.507+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@79b63325
+2025-05-15T21:22:17.507+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@708769b7
+2025-05-15T21:22:17.508+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@708769b7
+2025-05-15T21:22:17.508+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@708769b7
+2025-05-15T21:22:17.508+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@32e830a0
+2025-05-15T21:22:17.508+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@135e49b2
+2025-05-15T21:22:17.508+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@5bb97fe7
+2025-05-15T21:22:17.508+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@10b87ff6
+2025-05-15T21:22:17.508+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@10b87ff6
+2025-05-15T21:22:17.508+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@63262071
+2025-05-15T21:22:17.509+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@63262071
+2025-05-15T21:22:17.509+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@2d4f67e
+2025-05-15T21:22:17.509+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@1282f784
+2025-05-15T21:22:17.509+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@41167ded
+2025-05-15T21:22:17.509+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@13e1e816
+2025-05-15T21:22:17.509+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@36238b12
+2025-05-15T21:22:17.510+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@33187485
+2025-05-15T21:22:17.510+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@41938e1e
+2025-05-15T21:22:17.510+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@41938e1e
+2025-05-15T21:22:17.510+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@5d2e6f62
+2025-05-15T21:22:17.510+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@5d2e6f62
+2025-05-15T21:22:17.511+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@77ff14ce
+2025-05-15T21:22:17.512+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@77ff14ce
+2025-05-15T21:22:17.512+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@733fae8
+2025-05-15T21:22:17.512+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@733fae8
+2025-05-15T21:22:17.512+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@5a8d676e
+2025-05-15T21:22:17.512+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@5a8d676e
+2025-05-15T21:22:17.513+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@74764622
+2025-05-15T21:22:17.513+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@7ba06506
+2025-05-15T21:22:17.513+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@63dc3420
+2025-05-15T21:22:17.513+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@63dc3420
+2025-05-15T21:22:17.515+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@525b8922
+2025-05-15T21:22:17.515+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@145a821d
+2025-05-15T21:22:17.516+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@6caa4dc5
+2025-05-15T21:22:17.516+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@6ed51944
+2025-05-15T21:22:17.516+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@6ed51944
+2025-05-15T21:22:17.516+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@60c98f25
+2025-05-15T21:22:17.516+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@20c3b34b
+2025-05-15T21:22:17.517+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@1eb906f3
+2025-05-15T21:22:17.518+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@1eb906f3
+2025-05-15T21:22:17.518+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@58e02359
+2025-05-15T21:22:17.519+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@58e02359
+2025-05-15T21:22:17.519+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@74fc3fc7
+2025-05-15T21:22:17.521+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@74fc3fc7
+2025-05-15T21:22:17.521+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@74fc3fc7
+2025-05-15T21:22:17.522+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@491893f8
+2025-05-15T21:22:17.523+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@491893f8
+2025-05-15T21:22:17.523+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@491893f8
+2025-05-15T21:22:17.524+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@1f408ab6
+2025-05-15T21:22:17.524+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@46e388ec
+2025-05-15T21:22:17.524+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@53f495f0
+2025-05-15T21:22:17.524+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@53f495f0
+2025-05-15T21:22:17.524+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@5efe5b25
+2025-05-15T21:22:17.525+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@5efe5b25
+2025-05-15T21:22:17.525+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@5efe5b25
+2025-05-15T21:22:17.525+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@45707f76
+2025-05-15T21:22:17.525+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@1f0e2bdc
+2025-05-15T21:22:17.525+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@682266d8
+2025-05-15T21:22:17.525+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@682266d8
+2025-05-15T21:22:17.526+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@44a93f8a
+2025-05-15T21:22:17.526+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@44a93f8a
+2025-05-15T21:22:17.526+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@44a93f8a
+2025-05-15T21:22:17.526+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@26463a6
+2025-05-15T21:22:17.526+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@26463a6
+2025-05-15T21:22:17.528+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@6c5ae8fd
+2025-05-15T21:22:17.530+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@6c5ae8fd
+2025-05-15T21:22:17.531+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@17354708
+2025-05-15T21:22:17.531+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@17354708
+2025-05-15T21:22:17.531+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@1aed6f0b
+2025-05-15T21:22:17.531+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@1aed6f0b
+2025-05-15T21:22:17.531+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@3b3546a3
+2025-05-15T21:22:17.533+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@3b3546a3
+2025-05-15T21:22:17.533+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration vector -> org.hibernate.type.BasicTypeReference@134c38
+2025-05-15T21:22:17.533+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float_vector -> org.hibernate.type.BasicTypeReference@3d235635
+2025-05-15T21:22:17.534+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double_vector -> org.hibernate.type.BasicTypeReference@4cc7e3ad
+2025-05-15T21:22:17.535+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte_vector -> org.hibernate.type.BasicTypeReference@5dd6a4c8
+2025-05-15T21:22:17.535+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@47be41c6
+2025-05-15T21:22:17.546+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@24a3d414
+2025-05-15T21:22:17.546+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@24a3d414
+2025-05-15T21:22:17.548+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@7ce30c0b
+2025-05-15T21:22:17.549+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@1d7f2f0a
+2025-05-15T21:22:17.549+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@54defd69
+2025-05-15T21:22:17.549+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@531a716c
+2025-05-15T21:22:17.549+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@377dbc50
+2025-05-15T21:22:17.549+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@531ec2ca
+2025-05-15T21:22:17.549+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@70884875
+2025-05-15T21:22:17.550+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@7019d619
+2025-05-15T21:22:17.550+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@2a5c6b76
+2025-05-15T21:22:18.067+09:00  INFO 22196 --- [zerobase-login] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-15T21:22:18.203+09:00  INFO 22196 --- [zerobase-login] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-15T21:22:18.215+09:00 DEBUG 22196 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NCharTypeDescriptor) replaced previous registration(CharTypeDescriptor)
+2025-05-15T21:22:18.215+09:00 DEBUG 22196 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NVarcharTypeDescriptor) replaced previous registration(VarcharTypeDescriptor)
+2025-05-15T21:22:18.215+09:00 DEBUG 22196 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(LongNVarcharTypeDescriptor) replaced previous registration(LongVarcharTypeDescriptor)
+2025-05-15T21:22:18.219+09:00 DEBUG 22196 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NClobTypeDescriptor(DEFAULT)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2025-05-15T21:22:18.221+09:00 DEBUG 22196 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(TimestampUtcDescriptor) replaced previous registration(TimestampUtcDescriptor)
+2025-05-15T21:22:18.228+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,3015)
+2025-05-15T21:22:18.228+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,3015)
+2025-05-15T21:22:18.228+09:00 DEBUG 22196 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,3015)
+2025-05-15T21:22:18.231+09:00 DEBUG 22196 --- [zerobase-login] [main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@38968752] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@6294e4a6]
+2025-05-15T21:22:19.930+09:00  INFO 22196 --- [zerobase-login] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-15T21:22:19.931+09:00 DEBUG 22196 --- [zerobase-login] [main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@38968752] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@24d7c365]
+2025-05-15T21:22:19.935+09:00 TRACE 22196 --- [zerobase-login] [main] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@24d7c365] for TypeConfiguration
+2025-05-15T21:22:19.935+09:00  INFO 22196 --- [zerobase-login] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T21:22:20.696+09:00  INFO 22196 --- [zerobase-login] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-15T21:22:21.797+09:00  WARN 22196 --- [zerobase-login] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-15T21:22:21.850+09:00  WARN 22196 --- [zerobase-login] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 33e6b577-c458-44f7-bc42-dba46842397a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-15T21:22:21.892+09:00  INFO 22196 --- [zerobase-login] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-15T21:22:23.078+09:00  INFO 22196 --- [zerobase-login] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-05-15T21:22:23.235+09:00  INFO 22196 --- [zerobase-login] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-15T21:22:23.250+09:00  INFO 22196 --- [zerobase-login] [main] c.e.z.ZerobaseLoginApplication           : Started ZerobaseLoginApplication in 10.562 seconds (process running for 11.019)
+2025-05-15T21:22:24.848+09:00  INFO 22196 --- [zerobase-login] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-15T21:22:24.848+09:00  INFO 22196 --- [zerobase-login] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-15T21:22:24.850+09:00  INFO 22196 --- [zerobase-login] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-15T21:22:24.897+09:00  INFO 22196 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.BoardLogger             : ###############################
+2025-05-15T21:22:24.897+09:00  INFO 22196 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.BoardLogger             : ###############################
+2025-05-15T21:22:24.897+09:00  INFO 22196 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.BoardLogger             : 컨트롤러detail 호출 전!!!!!
+2025-05-15T21:22:24.897+09:00  INFO 22196 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:22:24.897+09:00  INFO 22196 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:22:24.898+09:00  INFO 22196 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : 서비스 호출 전!!!!!
+2025-05-15T21:22:24.925+09:00 DEBUG 22196 --- [zerobase-login] [http-nio-8080-exec-1] org.hibernate.SQL                        : select b1_0.id,bt1_0.id,bt1_0.board_name,bt1_0.reg_date,bt1_0.update_date,bt1_0.using_yn,b1_0.contents,b1_0.publish_end_date,b1_0.publish_start_date,b1_0.reg_date,b1_0.title,b1_0.top_yn,u1_0.id,u1_0.email,u1_0.lock_yn,u1_0.password,u1_0.phone,u1_0.reg_date,u1_0.status,u1_0.update_date,u1_0.user_name from board b1_0 left join board_type bt1_0 on bt1_0.id=b1_0.board_type_id left join users u1_0 on u1_0.id=b1_0.user_id where b1_0.id=?
+2025-05-15T21:22:24.975+09:00  INFO 22196 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:22:24.975+09:00  INFO 22196 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:22:24.975+09:00  INFO 22196 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : 서비스 호출 후!!!!!
+2025-05-15T21:22:24.979+09:00  INFO 22196 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.BoardLogger             : ###############################
+2025-05-15T21:22:24.981+09:00  INFO 22196 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.BoardLogger             : ###############################
+2025-05-15T21:22:24.981+09:00  INFO 22196 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.BoardLogger             : 컨트롤러detail 호출 후!!!!!
+2025-05-15T21:29:07.498+09:00  INFO 22196 --- [zerobase-login] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-15T21:29:07.696+09:00  INFO 22196 --- [zerobase-login] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-15T21:29:07.701+09:00  INFO 22196 --- [zerobase-login] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T21:29:07.702+09:00 TRACE 22196 --- [zerobase-login] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@24d7c365] for TypeConfiguration
+2025-05-15T21:29:07.702+09:00 DEBUG 22196 --- [zerobase-login] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@1071031] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@24d7c365]
+2025-05-15T21:29:07.704+09:00  INFO 22196 --- [zerobase-login] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-15T21:29:07.708+09:00  INFO 22196 --- [zerobase-login] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-15T21:29:11.583+09:00  INFO 18420 --- [zerobase-login] [main] c.e.z.ZerobaseLoginApplication           : Starting ZerobaseLoginApplication using Java 17.0.12 with PID 18420 (D:\develop\zerobase-login\out\production\classes started by user in D:\develop\zerobase-login)
+2025-05-15T21:29:11.587+09:00  INFO 18420 --- [zerobase-login] [main] c.e.z.ZerobaseLoginApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-05-15T21:29:12.282+09:00  INFO 18420 --- [zerobase-login] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-15T21:29:12.399+09:00  INFO 18420 --- [zerobase-login] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 15 JPA repository interfaces.
+2025-05-15T21:29:13.147+09:00  INFO 18420 --- [zerobase-login] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-15T21:29:13.162+09:00  INFO 18420 --- [zerobase-login] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-15T21:29:13.162+09:00  INFO 18420 --- [zerobase-login] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-15T21:29:13.237+09:00  INFO 18420 --- [zerobase-login] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-15T21:29:13.238+09:00  INFO 18420 --- [zerobase-login] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1605 ms
+2025-05-15T21:29:13.348+09:00  INFO 18420 --- [zerobase-login] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-15T21:29:13.531+09:00  INFO 18420 --- [zerobase-login] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-05-15T21:29:13.533+09:00  INFO 18420 --- [zerobase-login] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-15T21:29:13.687+09:00  INFO 18420 --- [zerobase-login] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-15T21:29:13.730+09:00  INFO 18420 --- [zerobase-login] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-15T21:29:13.759+09:00  INFO 18420 --- [zerobase-login] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-15T21:29:13.812+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@50bf795f
+2025-05-15T21:29:13.812+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@50bf795f
+2025-05-15T21:29:13.813+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@50bf795f
+2025-05-15T21:29:13.814+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@29fcfc54
+2025-05-15T21:29:13.814+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@29fcfc54
+2025-05-15T21:29:13.815+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@353b0719
+2025-05-15T21:29:13.815+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@353b0719
+2025-05-15T21:29:13.815+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@2a4e939a
+2025-05-15T21:29:13.816+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@2a4e939a
+2025-05-15T21:29:13.816+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@110620d
+2025-05-15T21:29:13.817+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@110620d
+2025-05-15T21:29:13.817+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@110620d
+2025-05-15T21:29:13.818+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@4f402027
+2025-05-15T21:29:13.818+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@4f402027
+2025-05-15T21:29:13.818+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@4f402027
+2025-05-15T21:29:13.819+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@7ea07516
+2025-05-15T21:29:13.819+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@7ea07516
+2025-05-15T21:29:13.819+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@30af23fd
+2025-05-15T21:29:13.819+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@65fc8edc
+2025-05-15T21:29:13.819+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@65fc8edc
+2025-05-15T21:29:13.819+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@a357c3e
+2025-05-15T21:29:13.819+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@7740b0ab
+2025-05-15T21:29:13.820+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@3eb9c575
+2025-05-15T21:29:13.820+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@3eb9c575
+2025-05-15T21:29:13.820+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@3eb9c575
+2025-05-15T21:29:13.820+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@3f322610
+2025-05-15T21:29:13.820+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@3f322610
+2025-05-15T21:29:13.821+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@3f322610
+2025-05-15T21:29:13.821+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@1e477944
+2025-05-15T21:29:13.822+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@1e477944
+2025-05-15T21:29:13.822+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@1e477944
+2025-05-15T21:29:13.822+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@6cf047cf
+2025-05-15T21:29:13.822+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@6cf047cf
+2025-05-15T21:29:13.822+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@6cf047cf
+2025-05-15T21:29:13.822+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@1c92a549
+2025-05-15T21:29:13.822+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@1c92a549
+2025-05-15T21:29:13.822+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@1c92a549
+2025-05-15T21:29:13.822+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@323e026d
+2025-05-15T21:29:13.822+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@323e026d
+2025-05-15T21:29:13.822+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@1716c037
+2025-05-15T21:29:13.822+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@1716c037
+2025-05-15T21:29:13.822+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@79b63325
+2025-05-15T21:29:13.824+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@79b63325
+2025-05-15T21:29:13.824+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@79b63325
+2025-05-15T21:29:13.824+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@708769b7
+2025-05-15T21:29:13.824+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@32e830a0
+2025-05-15T21:29:13.824+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@32e830a0
+2025-05-15T21:29:13.824+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@135e49b2
+2025-05-15T21:29:13.825+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@5bb97fe7
+2025-05-15T21:29:13.827+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@5bb97fe7
+2025-05-15T21:29:13.827+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@5bb97fe7
+2025-05-15T21:29:13.827+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@10b87ff6
+2025-05-15T21:29:13.827+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@63262071
+2025-05-15T21:29:13.827+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@2d4f67e
+2025-05-15T21:29:13.827+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@1282f784
+2025-05-15T21:29:13.827+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@1282f784
+2025-05-15T21:29:13.827+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@41167ded
+2025-05-15T21:29:13.827+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@41167ded
+2025-05-15T21:29:13.827+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@13e1e816
+2025-05-15T21:29:13.828+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@36238b12
+2025-05-15T21:29:13.828+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@33187485
+2025-05-15T21:29:13.828+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@41938e1e
+2025-05-15T21:29:13.828+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@5d2e6f62
+2025-05-15T21:29:13.828+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@77ff14ce
+2025-05-15T21:29:13.828+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@733fae8
+2025-05-15T21:29:13.828+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@733fae8
+2025-05-15T21:29:13.828+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@5a8d676e
+2025-05-15T21:29:13.828+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@5a8d676e
+2025-05-15T21:29:13.828+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@74764622
+2025-05-15T21:29:13.828+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@74764622
+2025-05-15T21:29:13.828+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@7ba06506
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@7ba06506
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@63dc3420
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@63dc3420
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@525b8922
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@145a821d
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@6caa4dc5
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@6caa4dc5
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@6ed51944
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@60c98f25
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@20c3b34b
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@1eb906f3
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@1eb906f3
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@58e02359
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@74fc3fc7
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@491893f8
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@491893f8
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@1f408ab6
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@1f408ab6
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@46e388ec
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@46e388ec
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@46e388ec
+2025-05-15T21:29:13.829+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@53f495f0
+2025-05-15T21:29:13.830+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@53f495f0
+2025-05-15T21:29:13.830+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@53f495f0
+2025-05-15T21:29:13.830+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@5efe5b25
+2025-05-15T21:29:13.830+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@45707f76
+2025-05-15T21:29:13.830+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@1f0e2bdc
+2025-05-15T21:29:13.830+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@1f0e2bdc
+2025-05-15T21:29:13.830+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@682266d8
+2025-05-15T21:29:13.830+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@682266d8
+2025-05-15T21:29:13.830+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@682266d8
+2025-05-15T21:29:13.830+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@44a93f8a
+2025-05-15T21:29:13.830+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@26463a6
+2025-05-15T21:29:13.830+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@6c5ae8fd
+2025-05-15T21:29:13.830+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@6c5ae8fd
+2025-05-15T21:29:13.830+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@17354708
+2025-05-15T21:29:13.830+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@17354708
+2025-05-15T21:29:13.830+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@17354708
+2025-05-15T21:29:13.830+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@1aed6f0b
+2025-05-15T21:29:13.831+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@1aed6f0b
+2025-05-15T21:29:13.832+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@3b3546a3
+2025-05-15T21:29:13.832+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@3b3546a3
+2025-05-15T21:29:13.832+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@134c38
+2025-05-15T21:29:13.832+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@134c38
+2025-05-15T21:29:13.833+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@3d235635
+2025-05-15T21:29:13.833+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@3d235635
+2025-05-15T21:29:13.833+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@4cc7e3ad
+2025-05-15T21:29:13.833+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@4cc7e3ad
+2025-05-15T21:29:13.834+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration vector -> org.hibernate.type.BasicTypeReference@5dd6a4c8
+2025-05-15T21:29:13.834+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float_vector -> org.hibernate.type.BasicTypeReference@47be41c6
+2025-05-15T21:29:13.834+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double_vector -> org.hibernate.type.BasicTypeReference@608b35fa
+2025-05-15T21:29:13.834+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte_vector -> org.hibernate.type.BasicTypeReference@13a268cd
+2025-05-15T21:29:13.834+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@7b3a6e95
+2025-05-15T21:29:13.837+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@6248cfab
+2025-05-15T21:29:13.838+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@6248cfab
+2025-05-15T21:29:13.839+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@531a716c
+2025-05-15T21:29:13.839+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@377dbc50
+2025-05-15T21:29:13.839+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@531ec2ca
+2025-05-15T21:29:13.839+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@70884875
+2025-05-15T21:29:13.839+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@7019d619
+2025-05-15T21:29:13.839+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@2a5c6b76
+2025-05-15T21:29:13.839+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@ff1f465
+2025-05-15T21:29:13.839+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@3d88ce0e
+2025-05-15T21:29:13.839+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@31f7eb8
+2025-05-15T21:29:14.028+09:00  INFO 18420 --- [zerobase-login] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-15T21:29:14.098+09:00  INFO 18420 --- [zerobase-login] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-15T21:29:14.106+09:00 DEBUG 18420 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NCharTypeDescriptor) replaced previous registration(CharTypeDescriptor)
+2025-05-15T21:29:14.106+09:00 DEBUG 18420 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NVarcharTypeDescriptor) replaced previous registration(VarcharTypeDescriptor)
+2025-05-15T21:29:14.107+09:00 DEBUG 18420 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(LongNVarcharTypeDescriptor) replaced previous registration(LongVarcharTypeDescriptor)
+2025-05-15T21:29:14.109+09:00 DEBUG 18420 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NClobTypeDescriptor(DEFAULT)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2025-05-15T21:29:14.110+09:00 DEBUG 18420 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(TimestampUtcDescriptor) replaced previous registration(TimestampUtcDescriptor)
+2025-05-15T21:29:14.115+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,3015)
+2025-05-15T21:29:14.115+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,3015)
+2025-05-15T21:29:14.115+09:00 DEBUG 18420 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,3015)
+2025-05-15T21:29:14.120+09:00 DEBUG 18420 --- [zerobase-login] [main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@27a0e6ce] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@2b80497f]
+2025-05-15T21:29:15.287+09:00  INFO 18420 --- [zerobase-login] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-15T21:29:15.287+09:00 DEBUG 18420 --- [zerobase-login] [main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@27a0e6ce] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@45e68fac]
+2025-05-15T21:29:15.289+09:00 TRACE 18420 --- [zerobase-login] [main] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@45e68fac] for TypeConfiguration
+2025-05-15T21:29:15.290+09:00  INFO 18420 --- [zerobase-login] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T21:29:15.779+09:00  INFO 18420 --- [zerobase-login] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-15T21:29:16.530+09:00  WARN 18420 --- [zerobase-login] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-15T21:29:16.557+09:00  WARN 18420 --- [zerobase-login] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f4a3df4e-67f9-4c8f-9a56-4e31e303047f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-15T21:29:16.576+09:00  INFO 18420 --- [zerobase-login] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-15T21:29:17.192+09:00  INFO 18420 --- [zerobase-login] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-05-15T21:29:17.320+09:00  INFO 18420 --- [zerobase-login] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-15T21:29:17.328+09:00  INFO 18420 --- [zerobase-login] [main] c.e.z.ZerobaseLoginApplication           : Started ZerobaseLoginApplication in 6.19 seconds (process running for 6.678)
+2025-05-15T21:29:28.242+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-15T21:29:28.243+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-15T21:29:28.245+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-15T21:29:28.300+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] c.e.z.common.aop.BoardLogger             : ###############################
+2025-05-15T21:29:28.301+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] c.e.z.common.aop.BoardLogger             : ###############################
+2025-05-15T21:29:28.301+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] c.e.z.common.aop.BoardLogger             : 컨트롤러detail 호출 전!!!!!
+2025-05-15T21:29:28.301+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:29:28.301+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:29:28.301+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] c.e.z.common.aop.LoginLogger             : 서비스 호출 전!!!!!
+2025-05-15T21:29:28.331+09:00 DEBUG 18420 --- [zerobase-login] [http-nio-8080-exec-6] org.hibernate.SQL                        : select b1_0.id,bt1_0.id,bt1_0.board_name,bt1_0.reg_date,bt1_0.update_date,bt1_0.using_yn,b1_0.contents,b1_0.publish_end_date,b1_0.publish_start_date,b1_0.reg_date,b1_0.title,b1_0.top_yn,u1_0.id,u1_0.email,u1_0.lock_yn,u1_0.password,u1_0.phone,u1_0.reg_date,u1_0.status,u1_0.update_date,u1_0.user_name from board b1_0 left join board_type bt1_0 on bt1_0.id=b1_0.board_type_id left join users u1_0 on u1_0.id=b1_0.user_id where b1_0.id=?
+2025-05-15T21:29:28.377+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:29:28.377+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:29:28.377+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] c.e.z.common.aop.LoginLogger             : 서비스 호출 후!!!!!
+2025-05-15T21:29:28.395+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:29:28.396+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:29:28.396+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] c.e.z.common.aop.LoginLogger             : 서비스 호출 전!!!!!
+2025-05-15T21:29:28.411+09:00 DEBUG 18420 --- [zerobase-login] [http-nio-8080-exec-6] org.hibernate.SQL                        : insert into logs (reg_date,text,id) values (?,?,default)
+2025-05-15T21:29:28.435+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:29:28.435+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:29:28.436+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] c.e.z.common.aop.LoginLogger             : 서비스 호출 후!!!!!
+2025-05-15T21:29:28.436+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] c.e.z.common.aop.BoardLogger             : 파라미터: 1
+결과: <200 OK OK,Board(id=1, user=User(id=1, email=test@naver.com, userName=박규태, password=$2a$10$aVjtWrojTOJJStC5EFH6Z.nG/U4c0PXJke3pmYWElmS/M77dG3Ud2, phone=010-1111-2222, regDate=2021-02-01T00:49:43, updateDate=null, status=Using, lockYn=false), boardType=BoardType(id=1, boardName=게시판1, regDate=2021-02-01T01:12:37, updateDate=null, usingYn=true), title=게시글1, contents=게시글내용1, regDate=2021-02-01T01:12:37, topYn=false, publishStartDate=null, publishEndDate=null),[]>
+2025-05-15T21:29:28.436+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] c.e.z.common.aop.BoardLogger             : ###############################
+2025-05-15T21:29:28.436+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] c.e.z.common.aop.BoardLogger             : ###############################
+2025-05-15T21:29:28.436+09:00  INFO 18420 --- [zerobase-login] [http-nio-8080-exec-6] c.e.z.common.aop.BoardLogger             : 컨트롤러detail 호출 후!!!!!
+2025-05-15T21:31:26.807+09:00  INFO 18420 --- [zerobase-login] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-15T21:31:27.027+09:00  INFO 18420 --- [zerobase-login] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-15T21:31:27.031+09:00  INFO 18420 --- [zerobase-login] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T21:31:27.031+09:00 TRACE 18420 --- [zerobase-login] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@45e68fac] for TypeConfiguration
+2025-05-15T21:31:27.031+09:00 DEBUG 18420 --- [zerobase-login] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@6f923195] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@45e68fac]
+2025-05-15T21:31:27.033+09:00  INFO 18420 --- [zerobase-login] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-15T21:31:27.036+09:00  INFO 18420 --- [zerobase-login] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-15T21:31:31.040+09:00  INFO 15188 --- [zerobase-login] [main] c.e.z.ZerobaseLoginApplication           : Starting ZerobaseLoginApplication using Java 17.0.12 with PID 15188 (D:\develop\zerobase-login\out\production\classes started by user in D:\develop\zerobase-login)
+2025-05-15T21:31:31.044+09:00  INFO 15188 --- [zerobase-login] [main] c.e.z.ZerobaseLoginApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-05-15T21:31:31.764+09:00  INFO 15188 --- [zerobase-login] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-15T21:31:31.853+09:00  INFO 15188 --- [zerobase-login] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 15 JPA repository interfaces.
+2025-05-15T21:31:32.527+09:00  INFO 15188 --- [zerobase-login] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-15T21:31:32.541+09:00  INFO 15188 --- [zerobase-login] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-15T21:31:32.542+09:00  INFO 15188 --- [zerobase-login] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-15T21:31:32.598+09:00  INFO 15188 --- [zerobase-login] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-15T21:31:32.599+09:00  INFO 15188 --- [zerobase-login] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1508 ms
+2025-05-15T21:31:32.727+09:00  INFO 15188 --- [zerobase-login] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-15T21:31:32.918+09:00  INFO 15188 --- [zerobase-login] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-05-15T21:31:32.921+09:00  INFO 15188 --- [zerobase-login] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-15T21:31:33.099+09:00  INFO 15188 --- [zerobase-login] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-15T21:31:33.146+09:00  INFO 15188 --- [zerobase-login] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-15T21:31:33.177+09:00  INFO 15188 --- [zerobase-login] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-15T21:31:33.248+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@60f662bd
+2025-05-15T21:31:33.249+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@60f662bd
+2025-05-15T21:31:33.249+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@60f662bd
+2025-05-15T21:31:33.249+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@5df2023c
+2025-05-15T21:31:33.249+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@5df2023c
+2025-05-15T21:31:33.250+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@23bd047f
+2025-05-15T21:31:33.250+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@23bd047f
+2025-05-15T21:31:33.250+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@3562e7c7
+2025-05-15T21:31:33.250+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@3562e7c7
+2025-05-15T21:31:33.250+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@66d2885c
+2025-05-15T21:31:33.250+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@66d2885c
+2025-05-15T21:31:33.252+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@66d2885c
+2025-05-15T21:31:33.252+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@2bfc8558
+2025-05-15T21:31:33.252+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@2bfc8558
+2025-05-15T21:31:33.253+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@2bfc8558
+2025-05-15T21:31:33.253+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@30358dc7
+2025-05-15T21:31:33.253+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@30358dc7
+2025-05-15T21:31:33.253+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@7fac18dc
+2025-05-15T21:31:33.253+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@50bf795f
+2025-05-15T21:31:33.253+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@50bf795f
+2025-05-15T21:31:33.253+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@29fcfc54
+2025-05-15T21:31:33.253+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@353b0719
+2025-05-15T21:31:33.253+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@2a4e939a
+2025-05-15T21:31:33.253+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@2a4e939a
+2025-05-15T21:31:33.253+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@2a4e939a
+2025-05-15T21:31:33.253+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@110620d
+2025-05-15T21:31:33.254+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@110620d
+2025-05-15T21:31:33.254+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@110620d
+2025-05-15T21:31:33.255+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@4f402027
+2025-05-15T21:31:33.255+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@4f402027
+2025-05-15T21:31:33.256+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@4f402027
+2025-05-15T21:31:33.256+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@22aee519
+2025-05-15T21:31:33.256+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@22aee519
+2025-05-15T21:31:33.256+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@22aee519
+2025-05-15T21:31:33.256+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@7c226095
+2025-05-15T21:31:33.256+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@7c226095
+2025-05-15T21:31:33.256+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@7c226095
+2025-05-15T21:31:33.256+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@7ea07516
+2025-05-15T21:31:33.256+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@7ea07516
+2025-05-15T21:31:33.256+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@30af23fd
+2025-05-15T21:31:33.256+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@30af23fd
+2025-05-15T21:31:33.256+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@65fc8edc
+2025-05-15T21:31:33.257+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@65fc8edc
+2025-05-15T21:31:33.257+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@65fc8edc
+2025-05-15T21:31:33.257+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@a357c3e
+2025-05-15T21:31:33.257+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@7740b0ab
+2025-05-15T21:31:33.257+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@7740b0ab
+2025-05-15T21:31:33.258+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@3eb9c575
+2025-05-15T21:31:33.258+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@3f322610
+2025-05-15T21:31:33.258+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@3f322610
+2025-05-15T21:31:33.258+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@3f322610
+2025-05-15T21:31:33.258+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@1e477944
+2025-05-15T21:31:33.259+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@6cf047cf
+2025-05-15T21:31:33.259+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@1c92a549
+2025-05-15T21:31:33.259+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@323e026d
+2025-05-15T21:31:33.259+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@323e026d
+2025-05-15T21:31:33.259+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@1716c037
+2025-05-15T21:31:33.260+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@1716c037
+2025-05-15T21:31:33.260+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@79b63325
+2025-05-15T21:31:33.260+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@708769b7
+2025-05-15T21:31:33.260+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@32e830a0
+2025-05-15T21:31:33.260+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@135e49b2
+2025-05-15T21:31:33.260+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@5bb97fe7
+2025-05-15T21:31:33.260+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@10b87ff6
+2025-05-15T21:31:33.261+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@63262071
+2025-05-15T21:31:33.261+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@63262071
+2025-05-15T21:31:33.261+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@2d4f67e
+2025-05-15T21:31:33.261+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@2d4f67e
+2025-05-15T21:31:33.261+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@1282f784
+2025-05-15T21:31:33.261+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@1282f784
+2025-05-15T21:31:33.261+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@41167ded
+2025-05-15T21:31:33.261+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@41167ded
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@13e1e816
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@13e1e816
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@36238b12
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@33187485
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@41938e1e
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@41938e1e
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@5d2e6f62
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@77ff14ce
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@733fae8
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@5a8d676e
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@5a8d676e
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@74764622
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@7ba06506
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@63dc3420
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@63dc3420
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@525b8922
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@525b8922
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@145a821d
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@145a821d
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@145a821d
+2025-05-15T21:31:33.262+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@6caa4dc5
+2025-05-15T21:31:33.263+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@6caa4dc5
+2025-05-15T21:31:33.263+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@6caa4dc5
+2025-05-15T21:31:33.263+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@6ed51944
+2025-05-15T21:31:33.263+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@60c98f25
+2025-05-15T21:31:33.263+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@20c3b34b
+2025-05-15T21:31:33.263+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@20c3b34b
+2025-05-15T21:31:33.263+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@1eb906f3
+2025-05-15T21:31:33.263+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@1eb906f3
+2025-05-15T21:31:33.263+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@1eb906f3
+2025-05-15T21:31:33.263+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@58e02359
+2025-05-15T21:31:33.263+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@74fc3fc7
+2025-05-15T21:31:33.263+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@491893f8
+2025-05-15T21:31:33.263+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@491893f8
+2025-05-15T21:31:33.263+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@1f408ab6
+2025-05-15T21:31:33.263+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@1f408ab6
+2025-05-15T21:31:33.263+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@1f408ab6
+2025-05-15T21:31:33.264+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@46e388ec
+2025-05-15T21:31:33.264+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@46e388ec
+2025-05-15T21:31:33.264+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@53f495f0
+2025-05-15T21:31:33.265+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@53f495f0
+2025-05-15T21:31:33.265+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@5efe5b25
+2025-05-15T21:31:33.266+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@5efe5b25
+2025-05-15T21:31:33.266+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@45707f76
+2025-05-15T21:31:33.266+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@45707f76
+2025-05-15T21:31:33.266+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@1f0e2bdc
+2025-05-15T21:31:33.266+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@1f0e2bdc
+2025-05-15T21:31:33.266+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration vector -> org.hibernate.type.BasicTypeReference@682266d8
+2025-05-15T21:31:33.266+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float_vector -> org.hibernate.type.BasicTypeReference@44a93f8a
+2025-05-15T21:31:33.266+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double_vector -> org.hibernate.type.BasicTypeReference@26463a6
+2025-05-15T21:31:33.266+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte_vector -> org.hibernate.type.BasicTypeReference@6c5ae8fd
+2025-05-15T21:31:33.266+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@17354708
+2025-05-15T21:31:33.275+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@1fc1c7e
+2025-05-15T21:31:33.276+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@1fc1c7e
+2025-05-15T21:31:33.276+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@5871a482
+2025-05-15T21:31:33.277+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@45c90a05
+2025-05-15T21:31:33.277+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@296676c4
+2025-05-15T21:31:33.277+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@df7d1d4
+2025-05-15T21:31:33.277+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@58f7215c
+2025-05-15T21:31:33.277+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@55638165
+2025-05-15T21:31:33.277+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@4fa91d5b
+2025-05-15T21:31:33.277+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@7ce30c0b
+2025-05-15T21:31:33.277+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@1d7f2f0a
+2025-05-15T21:31:33.480+09:00  INFO 15188 --- [zerobase-login] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-15T21:31:33.544+09:00  INFO 15188 --- [zerobase-login] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-15T21:31:33.551+09:00 DEBUG 15188 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NCharTypeDescriptor) replaced previous registration(CharTypeDescriptor)
+2025-05-15T21:31:33.551+09:00 DEBUG 15188 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NVarcharTypeDescriptor) replaced previous registration(VarcharTypeDescriptor)
+2025-05-15T21:31:33.551+09:00 DEBUG 15188 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(LongNVarcharTypeDescriptor) replaced previous registration(LongVarcharTypeDescriptor)
+2025-05-15T21:31:33.553+09:00 DEBUG 15188 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NClobTypeDescriptor(DEFAULT)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2025-05-15T21:31:33.554+09:00 DEBUG 15188 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(TimestampUtcDescriptor) replaced previous registration(TimestampUtcDescriptor)
+2025-05-15T21:31:33.558+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,3015)
+2025-05-15T21:31:33.559+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,3015)
+2025-05-15T21:31:33.559+09:00 DEBUG 15188 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,3015)
+2025-05-15T21:31:33.562+09:00 DEBUG 15188 --- [zerobase-login] [main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@7b64bbad] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@71eff6a3]
+2025-05-15T21:31:34.716+09:00  INFO 15188 --- [zerobase-login] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-15T21:31:34.717+09:00 DEBUG 15188 --- [zerobase-login] [main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@7b64bbad] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@83bbab]
+2025-05-15T21:31:34.719+09:00 TRACE 15188 --- [zerobase-login] [main] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@83bbab] for TypeConfiguration
+2025-05-15T21:31:34.720+09:00  INFO 15188 --- [zerobase-login] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T21:31:35.168+09:00  INFO 15188 --- [zerobase-login] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-15T21:31:35.805+09:00  WARN 15188 --- [zerobase-login] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-15T21:31:35.827+09:00  WARN 15188 --- [zerobase-login] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7aadb384-fda2-4213-96e4-a913d61284b7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-15T21:31:35.852+09:00  INFO 15188 --- [zerobase-login] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-15T21:31:36.399+09:00  INFO 15188 --- [zerobase-login] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-05-15T21:31:36.495+09:00  INFO 15188 --- [zerobase-login] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-15T21:31:36.505+09:00  INFO 15188 --- [zerobase-login] [main] c.e.z.ZerobaseLoginApplication           : Started ZerobaseLoginApplication in 5.908 seconds (process running for 6.434)
+2025-05-15T21:31:53.733+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-15T21:31:53.733+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-15T21:31:53.735+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-15T21:31:53.783+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.BoardLogger             : ###############################
+2025-05-15T21:31:53.783+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.BoardLogger             : ###############################
+2025-05-15T21:31:53.783+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.BoardLogger             : 컨트롤러detail 호출 전!!!!!
+2025-05-15T21:31:53.783+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:31:53.783+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:31:53.783+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : 서비스 호출 전!!!!!
+2025-05-15T21:31:53.811+09:00 DEBUG 15188 --- [zerobase-login] [http-nio-8080-exec-1] org.hibernate.SQL                        : select b1_0.id,bt1_0.id,bt1_0.board_name,bt1_0.reg_date,bt1_0.update_date,bt1_0.using_yn,b1_0.contents,b1_0.publish_end_date,b1_0.publish_start_date,b1_0.reg_date,b1_0.title,b1_0.top_yn,u1_0.id,u1_0.email,u1_0.lock_yn,u1_0.password,u1_0.phone,u1_0.reg_date,u1_0.status,u1_0.update_date,u1_0.user_name from board b1_0 left join board_type bt1_0 on bt1_0.id=b1_0.board_type_id left join users u1_0 on u1_0.id=b1_0.user_id where b1_0.id=?
+2025-05-15T21:31:53.856+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:31:53.857+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:31:53.857+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : 서비스 호출 후!!!!!
+2025-05-15T21:31:53.873+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:31:53.873+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:31:53.873+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : 서비스 호출 전!!!!!
+2025-05-15T21:31:53.889+09:00 DEBUG 15188 --- [zerobase-login] [http-nio-8080-exec-1] org.hibernate.SQL                        : insert into logs (reg_date,text,id) values (?,?,default)
+2025-05-15T21:31:53.910+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:31:53.910+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : ###############################
+2025-05-15T21:31:53.910+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.LoginLogger             : 서비스 호출 후!!!!!
+2025-05-15T21:31:53.910+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.BoardLogger             : 파라미터: 1
+결과: <200 OK OK,Board(id=1, user=User(id=1, email=test@naver.com, userName=박규태, password=$2a$10$aVjtWrojTOJJStC5EFH6Z.nG/U4c0PXJke3pmYWElmS/M77dG3Ud2, phone=010-1111-2222, regDate=2021-02-01T00:49:43, updateDate=null, status=Using, lockYn=false), boardType=BoardType(id=1, boardName=게시판1, regDate=2021-02-01T01:12:37, updateDate=null, usingYn=true), title=게시글1, contents=게시글내용1, regDate=2021-02-01T01:12:37, topYn=false, publishStartDate=null, publishEndDate=null),[]>
+2025-05-15T21:31:53.910+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.BoardLogger             : ###############################
+2025-05-15T21:31:53.910+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.BoardLogger             : ###############################
+2025-05-15T21:31:53.910+09:00  INFO 15188 --- [zerobase-login] [http-nio-8080-exec-1] c.e.z.common.aop.BoardLogger             : 컨트롤러detail 호출 후!!!!!
+2025-05-15T21:32:33.516+09:00  INFO 15188 --- [zerobase-login] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-15T21:32:33.692+09:00  INFO 15188 --- [zerobase-login] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-15T21:32:33.698+09:00  INFO 15188 --- [zerobase-login] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15T21:32:33.698+09:00 TRACE 15188 --- [zerobase-login] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@83bbab] for TypeConfiguration
+2025-05-15T21:32:33.698+09:00 DEBUG 15188 --- [zerobase-login] [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@9bae9f5] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@83bbab]
+2025-05-15T21:32:33.699+09:00  INFO 15188 --- [zerobase-login] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-15T21:32:33.701+09:00  INFO 15188 --- [zerobase-login] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-15T21:33:52.780+09:00  INFO 21916 --- [zerobase-login] [main] c.e.z.ZerobaseLoginApplication           : Starting ZerobaseLoginApplication using Java 17.0.12 with PID 21916 (D:\develop\zerobase-login\out\production\classes started by user in D:\develop\zerobase-login)
+2025-05-15T21:33:52.784+09:00  INFO 21916 --- [zerobase-login] [main] c.e.z.ZerobaseLoginApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-05-15T21:33:53.451+09:00  INFO 21916 --- [zerobase-login] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-15T21:33:53.572+09:00  INFO 21916 --- [zerobase-login] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 15 JPA repository interfaces.
+2025-05-15T21:33:54.227+09:00  INFO 21916 --- [zerobase-login] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-15T21:33:54.239+09:00  INFO 21916 --- [zerobase-login] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-15T21:33:54.239+09:00  INFO 21916 --- [zerobase-login] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-15T21:33:54.300+09:00  INFO 21916 --- [zerobase-login] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-15T21:33:54.300+09:00  INFO 21916 --- [zerobase-login] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1473 ms
+2025-05-15T21:33:54.398+09:00  INFO 21916 --- [zerobase-login] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-15T21:33:54.569+09:00  INFO 21916 --- [zerobase-login] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-05-15T21:33:54.572+09:00  INFO 21916 --- [zerobase-login] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-15T21:33:54.721+09:00  INFO 21916 --- [zerobase-login] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-15T21:33:54.760+09:00  INFO 21916 --- [zerobase-login] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-15T21:33:54.808+09:00  INFO 21916 --- [zerobase-login] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-15T21:33:54.863+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@29fcfc54
+2025-05-15T21:33:54.864+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@29fcfc54
+2025-05-15T21:33:54.864+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@29fcfc54
+2025-05-15T21:33:54.864+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@353b0719
+2025-05-15T21:33:54.864+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@353b0719
+2025-05-15T21:33:54.865+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@2a4e939a
+2025-05-15T21:33:54.865+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@2a4e939a
+2025-05-15T21:33:54.865+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@110620d
+2025-05-15T21:33:54.865+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@110620d
+2025-05-15T21:33:54.866+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@4f402027
+2025-05-15T21:33:54.866+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@4f402027
+2025-05-15T21:33:54.866+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@4f402027
+2025-05-15T21:33:54.866+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@22aee519
+2025-05-15T21:33:54.866+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@22aee519
+2025-05-15T21:33:54.866+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@22aee519
+2025-05-15T21:33:54.866+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@30af23fd
+2025-05-15T21:33:54.867+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@30af23fd
+2025-05-15T21:33:54.867+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@65fc8edc
+2025-05-15T21:33:54.867+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@a357c3e
+2025-05-15T21:33:54.867+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@a357c3e
+2025-05-15T21:33:54.867+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@7740b0ab
+2025-05-15T21:33:54.867+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@3eb9c575
+2025-05-15T21:33:54.867+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@3f322610
+2025-05-15T21:33:54.868+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@3f322610
+2025-05-15T21:33:54.868+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@3f322610
+2025-05-15T21:33:54.868+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@1e477944
+2025-05-15T21:33:54.868+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@1e477944
+2025-05-15T21:33:54.868+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@1e477944
+2025-05-15T21:33:54.869+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@6cf047cf
+2025-05-15T21:33:54.869+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@6cf047cf
+2025-05-15T21:33:54.869+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@6cf047cf
+2025-05-15T21:33:54.869+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@1c92a549
+2025-05-15T21:33:54.869+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@1c92a549
+2025-05-15T21:33:54.870+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@1c92a549
+2025-05-15T21:33:54.870+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@323e026d
+2025-05-15T21:33:54.870+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@323e026d
+2025-05-15T21:33:54.870+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@323e026d
+2025-05-15T21:33:54.870+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@1716c037
+2025-05-15T21:33:54.870+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@1716c037
+2025-05-15T21:33:54.870+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@79b63325
+2025-05-15T21:33:54.870+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@79b63325
+2025-05-15T21:33:54.870+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@708769b7
+2025-05-15T21:33:54.870+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@708769b7
+2025-05-15T21:33:54.870+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@708769b7
+2025-05-15T21:33:54.871+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@32e830a0
+2025-05-15T21:33:54.871+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@135e49b2
+2025-05-15T21:33:54.871+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@135e49b2
+2025-05-15T21:33:54.872+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@5bb97fe7
+2025-05-15T21:33:54.872+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@10b87ff6
+2025-05-15T21:33:54.872+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@10b87ff6
+2025-05-15T21:33:54.872+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@10b87ff6
+2025-05-15T21:33:54.872+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@63262071
+2025-05-15T21:33:54.872+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@2d4f67e
+2025-05-15T21:33:54.872+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@1282f784
+2025-05-15T21:33:54.873+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@41167ded
+2025-05-15T21:33:54.873+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@41167ded
+2025-05-15T21:33:54.873+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@13e1e816
+2025-05-15T21:33:54.873+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@13e1e816
+2025-05-15T21:33:54.873+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@36238b12
+2025-05-15T21:33:54.873+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@33187485
+2025-05-15T21:33:54.873+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@41938e1e
+2025-05-15T21:33:54.873+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@5d2e6f62
+2025-05-15T21:33:54.873+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@77ff14ce
+2025-05-15T21:33:54.874+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@733fae8
+2025-05-15T21:33:54.874+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@5a8d676e
+2025-05-15T21:33:54.874+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@5a8d676e
+2025-05-15T21:33:54.874+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@74764622
+2025-05-15T21:33:54.874+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@74764622
+2025-05-15T21:33:54.874+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@7ba06506
+2025-05-15T21:33:54.874+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@7ba06506
+2025-05-15T21:33:54.874+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@63dc3420
+2025-05-15T21:33:54.874+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@63dc3420
+2025-05-15T21:33:54.874+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@525b8922
+2025-05-15T21:33:54.874+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@525b8922
+2025-05-15T21:33:54.874+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@145a821d
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@6caa4dc5
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@6ed51944
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@6ed51944
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@60c98f25
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@20c3b34b
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@1eb906f3
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@58e02359
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@58e02359
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@74fc3fc7
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@491893f8
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@1f408ab6
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@1f408ab6
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@46e388ec
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@46e388ec
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@53f495f0
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@53f495f0
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@53f495f0
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@5efe5b25
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@5efe5b25
+2025-05-15T21:33:54.875+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@5efe5b25
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@45707f76
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@1f0e2bdc
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@682266d8
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@682266d8
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@44a93f8a
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@44a93f8a
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@44a93f8a
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@26463a6
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@6c5ae8fd
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@17354708
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@17354708
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@1aed6f0b
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@1aed6f0b
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@1aed6f0b
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@3b3546a3
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@3b3546a3
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@134c38
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@134c38
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@3d235635
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@3d235635
+2025-05-15T21:33:54.876+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@4cc7e3ad
+2025-05-15T21:33:54.877+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@4cc7e3ad
+2025-05-15T21:33:54.877+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@5dd6a4c8
+2025-05-15T21:33:54.877+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@5dd6a4c8
+2025-05-15T21:33:54.877+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration vector -> org.hibernate.type.BasicTypeReference@47be41c6
+2025-05-15T21:33:54.877+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float_vector -> org.hibernate.type.BasicTypeReference@608b35fa
+2025-05-15T21:33:54.877+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double_vector -> org.hibernate.type.BasicTypeReference@13a268cd
+2025-05-15T21:33:54.877+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte_vector -> org.hibernate.type.BasicTypeReference@7b3a6e95
+2025-05-15T21:33:54.877+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@4ebfb045
+2025-05-15T21:33:54.885+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@5871a482
+2025-05-15T21:33:54.885+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@5871a482
+2025-05-15T21:33:54.887+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@377dbc50
+2025-05-15T21:33:54.887+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@531ec2ca
+2025-05-15T21:33:54.887+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@70884875
+2025-05-15T21:33:54.887+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@7019d619
+2025-05-15T21:33:54.887+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@2a5c6b76
+2025-05-15T21:33:54.887+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@ff1f465
+2025-05-15T21:33:54.887+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@3d88ce0e
+2025-05-15T21:33:54.887+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@31f7eb8
+2025-05-15T21:33:54.887+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@4ad1a276
+2025-05-15T21:33:55.064+09:00  INFO 21916 --- [zerobase-login] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-15T21:33:55.134+09:00  INFO 21916 --- [zerobase-login] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-15T21:33:55.144+09:00 DEBUG 21916 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NCharTypeDescriptor) replaced previous registration(CharTypeDescriptor)
+2025-05-15T21:33:55.145+09:00 DEBUG 21916 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NVarcharTypeDescriptor) replaced previous registration(VarcharTypeDescriptor)
+2025-05-15T21:33:55.145+09:00 DEBUG 21916 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(LongNVarcharTypeDescriptor) replaced previous registration(LongVarcharTypeDescriptor)
+2025-05-15T21:33:55.146+09:00 DEBUG 21916 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NClobTypeDescriptor(DEFAULT)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2025-05-15T21:33:55.147+09:00 DEBUG 21916 --- [zerobase-login] [main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(TimestampUtcDescriptor) replaced previous registration(TimestampUtcDescriptor)
+2025-05-15T21:33:55.151+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,3015)
+2025-05-15T21:33:55.152+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,3015)
+2025-05-15T21:33:55.152+09:00 DEBUG 21916 --- [zerobase-login] [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,3015)
+2025-05-15T21:33:55.155+09:00 DEBUG 21916 --- [zerobase-login] [main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@2b80497f] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@6ef4297d]
