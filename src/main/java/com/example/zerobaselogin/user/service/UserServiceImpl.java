@@ -2,6 +2,7 @@ package com.example.zerobaselogin.user.service;
 
 import com.example.zerobaselogin.board.model.ServiceResult;
 import com.example.zerobaselogin.common.exception.BizException;
+import com.example.zerobaselogin.logs.service.LogService;
 import com.example.zerobaselogin.user.entity.User;
 import com.example.zerobaselogin.user.entity.UserInterest;
 import com.example.zerobaselogin.user.model.*;
@@ -23,6 +24,8 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final UserCustomRepository userCustomRepository;
     private final UserInterestRepository userInterestRepository;
+
+    private final LogService logService;
 
     @Override
     public UserSummary getUserStatusCount() {
