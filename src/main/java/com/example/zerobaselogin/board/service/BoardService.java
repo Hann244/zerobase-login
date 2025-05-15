@@ -31,6 +31,9 @@ public interface BoardService {
     // 게시글의 좋아요를 함
     ServiceResult setBoardLike(Long id, String email);
 
+    // 게시글의 좋아요를 취소함
+    ServiceResult setBoardUnLike(Long id, String email);
+
     // 게시판 타입의 게시글 수를 리턴
     //List<BoardTypeCount> getBoardTypeCount();
 }
