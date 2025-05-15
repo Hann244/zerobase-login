@@ -1,9 +1,6 @@
 package com.example.zerobaselogin.board.service;
 
-import com.example.zerobaselogin.board.entity.Board;
-import com.example.zerobaselogin.board.entity.BoardHits;
-import com.example.zerobaselogin.board.entity.BoardLike;
-import com.example.zerobaselogin.board.entity.BoardType;
+import com.example.zerobaselogin.board.entity.*;
 import com.example.zerobaselogin.board.model.*;
 import com.example.zerobaselogin.board.repository.*;
 import com.example.zerobaselogin.user.entity.User;
@@ -25,6 +22,7 @@ public class BoardServiceImpl implements BoardService {
     private final BoardHitsRepository boardHitsRepository;
     private final UserRepository userRepository;
     private final BoardLikeRepository boardLikeRepository;
+    private final BoardBadReportRepository boardBadReportRepository;
 
     @Override
     public ServiceResult addBoard(BoardTypeInput boardTypeInput) {
@@ -226,6 +224,39 @@ public class BoardServiceImpl implements BoardService {
         BoardLike boardLike = optionalBoardLike.get();
 
         boardLikeRepository.delete(boardLike);
+        return ServiceResult.success();
+    }
+
+    @Override
+    public ServiceResult addBadReport(Long id, String email, BoardBadReportInput boardBadReportInput) {
+
+        Optional<Board> optionalBoard = boardRepository.findById(id);
+        if (!optionalBoard.isPresent()) {
+            return ServiceResult.fail("게시글이 존재하지 않습니다.");
+        }
+        Board board = optionalBoard.get();
+
+        Optional<User> optionalUser = userRepository.findByEmail(email);
+        if (!optionalUser.isPresent()) {
+            return ServiceResult.fail("회원 정보가 존재하지 않습니다.");
+        }
+        User user = optionalUser.get();
+
+        BoardBadReport boardBadReport = BoardBadReport.builder()
+                .userId(user.getId())
+                .userName(user.getUserName())
+                .userEmail(user.getEmail())
+                .boardId(board.getId())
+                .boardUserId(board.getUser().getId())
+                .boardTitle(board.getTitle())
+                .boardContents(board.getContents())
+                .boardRegDate(board.getRegDate())
+                .comments(boardBadReportInput.getComments())
+                .regDate(LocalDateTime.now())
+                .build();
+
+        boardBadReportRepository.save(boardBadReport);
+
         return ServiceResult.success();
     }
 
