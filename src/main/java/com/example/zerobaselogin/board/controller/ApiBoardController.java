@@ -1,11 +1,13 @@
 package com.example.zerobaselogin.board.controller;
 
+import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.example.zerobaselogin.board.entity.BoardType;
 import com.example.zerobaselogin.board.model.*;
 import com.example.zerobaselogin.board.service.BoardService;
 import com.example.zerobaselogin.common.model.ResponseResult;
 import com.example.zerobaselogin.notice.model.ResponseError;
 import com.example.zerobaselogin.user.model.ResponseMessage;
+import com.example.zerobaselogin.util.JWTUtils;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -125,6 +127,27 @@ public class ApiBoardController {
         ServiceResult result = boardService.setBoardPeriody(id, boardPeriod);
 
         if (!result.isResult()) {
+            return ResponseResult.fail(result.getMessage());
+        }
+
+        return ResponseResult.succeess();
+
+    }
+
+    // 게시글의 조회수를 증가시키는 API
+    @PutMapping("/{id}/hits")
+    public ResponseEntity<?> boardHits(@PathVariable("id") Long id,
+                          @RequestHeader("F-TOKEN") String token) {
+
+        String email = "";
+        try {
+            email = JWTUtils.getIssuer(token);
+        } catch (JWTVerificationException e) {
+            return ResponseResult.fail("토큰 정보가 정확하지 않습니다.");
+        }
+
+        ServiceResult result = boardService.setBoardHits(id, email);
+        if (result.isFail()) {
             return ResponseResult.fail(result.getMessage());
         }
 
