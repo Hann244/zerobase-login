@@ -1,11 +1,9 @@
 package com.example.zerobaselogin.board.controller;
 
 import com.example.zerobaselogin.board.entity.BoardType;
-import com.example.zerobaselogin.board.model.BoardTypeCount;
-import com.example.zerobaselogin.board.model.BoardTypeInput;
-import com.example.zerobaselogin.board.model.BoardTypeUsing;
-import com.example.zerobaselogin.board.model.ServiceResult;
+import com.example.zerobaselogin.board.model.*;
 import com.example.zerobaselogin.board.service.BoardService;
+import com.example.zerobaselogin.common.model.ResponseResult;
 import com.example.zerobaselogin.notice.model.ResponseError;
 import com.example.zerobaselogin.user.model.ResponseMessage;
 import jakarta.validation.Valid;
@@ -118,5 +116,19 @@ public class ApiBoardController {
     public ResponseEntity<?> boardPostTopClear(@PathVariable("id") Long id) {
         ServiceResult result = boardService.setBoardTop(id, false);
         return ResponseEntity.ok().body(result);
+    }
+
+    // 게시글의 게시기간을 시작일과 종료일로 설정하는 API
+    @PatchMapping("/{id}/publish")
+    public ResponseEntity<?> boardPariod(@PathVariable("id") Long id, @RequestBody BoardPeriod boardPeriod) {
+
+        ServiceResult result = boardService.setBoardPeriody(id, boardPeriod);
+
+        if (!result.isResult()) {
+            return ResponseResult.fail(result.getMessage());
+        }
+
+        return ResponseResult.succeess();
+
     }
 }

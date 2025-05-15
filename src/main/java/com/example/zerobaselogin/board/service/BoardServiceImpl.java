@@ -2,10 +2,7 @@ package com.example.zerobaselogin.board.service;
 
 import com.example.zerobaselogin.board.entity.Board;
 import com.example.zerobaselogin.board.entity.BoardType;
-import com.example.zerobaselogin.board.model.BoardTypeCount;
-import com.example.zerobaselogin.board.model.BoardTypeInput;
-import com.example.zerobaselogin.board.model.BoardTypeUsing;
-import com.example.zerobaselogin.board.model.ServiceResult;
+import com.example.zerobaselogin.board.model.*;
 import com.example.zerobaselogin.board.repository.BoardTypeCustomRepository;
 import com.example.zerobaselogin.board.repository.BoardRepository;
 import com.example.zerobaselogin.board.repository.BoardTypeRepository;
@@ -125,6 +122,22 @@ public class BoardServiceImpl implements BoardService {
         }
 
         board.setTopYn(topYn);
+        boardRepository.save(board);
+
+        return ServiceResult.success();
+    }
+
+    @Override
+    public ServiceResult setBoardPeriody(Long id, BoardPeriod boardPeriod) {
+        Optional<Board> optionalBoard = boardRepository.findById(id);
+        if (!optionalBoard.isPresent()) {
+            return ServiceResult.fail("게시글이 존재하지 않습니다.");
+        }
+
+        Board board = optionalBoard.get();
+
+        board.setPublishStartDate(boardPeriod.getStartDate());
+        board.setPublishEndDate(boardPeriod.getEndDate());
         boardRepository.save(board);
 
         return ServiceResult.success();

@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
@@ -39,4 +40,10 @@ public class Board {
 
     @Column
     private boolean topYn;
+
+    @Column
+    private LocalDate publishStartDate;
+
+    @Column
+    private LocalDate publishEndDate;
 }
