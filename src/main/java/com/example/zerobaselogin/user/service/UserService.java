@@ -3,8 +3,10 @@ package com.example.zerobaselogin.user.service;
 import com.example.zerobaselogin.board.model.ServiceResult;
 import com.example.zerobaselogin.user.entity.User;
 import com.example.zerobaselogin.user.model.UserLogCount;
+import com.example.zerobaselogin.user.model.UserLogin;
 import com.example.zerobaselogin.user.model.UserNoticeCount;
 import com.example.zerobaselogin.user.model.UserSummary;
+import jakarta.validation.Valid;
 
 import java.util.List;
 
@@ -26,4 +28,7 @@ public interface UserService {
 
     // 관심 사용자 삭제
     ServiceResult removeInterestUser(String email, Long interestId);
+
+    // 로그인 정보 확인
+    User login(UserLogin userLogin);
 }

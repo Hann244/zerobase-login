@@ -1,15 +1,14 @@
 package com.example.zerobaselogin.user.service;
 
 import com.example.zerobaselogin.board.model.ServiceResult;
+import com.example.zerobaselogin.common.exception.BizException;
 import com.example.zerobaselogin.user.entity.User;
 import com.example.zerobaselogin.user.entity.UserInterest;
-import com.example.zerobaselogin.user.model.UserLogCount;
-import com.example.zerobaselogin.user.model.UserNoticeCount;
-import com.example.zerobaselogin.user.model.UserStatus;
-import com.example.zerobaselogin.user.model.UserSummary;
+import com.example.zerobaselogin.user.model.*;
 import com.example.zerobaselogin.user.repository.UserCustomRepository;
 import com.example.zerobaselogin.user.repository.UserInterestRepository;
 import com.example.zerobaselogin.user.repository.UserRepository;
+import com.example.zerobaselogin.util.PasswordUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -119,5 +118,21 @@ public class UserServiceImpl implements UserService {
 
         userInterestRepository.delete(userInterest);
         return ServiceResult.success();
+    }
+
+    @Override
+    public User login(UserLogin userLogin) {
+
+        Optional<User> optionalUser = userRepository.findByEmail(userLogin.getEmail());
+        if (!optionalUser.isPresent()) {
+            throw new BizException("회원 정보가 존재하지 않습니다.");
+        }
+        User user = optionalUser.get();
+
+        if (!PasswordUtils.equalPassword(userLogin.getPassword(), user.getPassword())) {
+            throw new BizException("일치하는 정보가 없습니다.");
+        }
+
+        return user;
     }
 }
