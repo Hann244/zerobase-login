@@ -2,6 +2,7 @@ package com.example.zerobaselogin.board.service;
 
 import com.example.zerobaselogin.board.entity.Board;
 import com.example.zerobaselogin.board.entity.BoardBadReport;
+import com.example.zerobaselogin.board.entity.BoardComment;
 import com.example.zerobaselogin.board.entity.BoardType;
 import com.example.zerobaselogin.board.model.*;
 import jakarta.validation.Valid;
@@ -56,6 +57,9 @@ public interface BoardService {
 
     // 본인이 작성한 게시글 리턴
     List<Board> postList(String email);
+
+    // 본인이 작성한 코멘트 목록 리턴
+    List<BoardComment> commentList(String email);
 
     // 게시판 타입의 게시글 수를 리턴
     //List<BoardTypeCount> getBoardTypeCount();

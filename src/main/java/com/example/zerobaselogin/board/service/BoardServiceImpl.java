@@ -26,6 +26,7 @@ public class BoardServiceImpl implements BoardService {
     private final BoardBadReportRepository boardBadReportRepository;
     private final BoardScrapRepository boardScrapRepository;
     private final BoardBookmarkRepository boardBookmarkRepository;
+    private final BoardCommentRepository boardCommentRepository;
 
     @Override
     public ServiceResult addBoard(BoardTypeInput boardTypeInput) {
@@ -386,6 +387,18 @@ public class BoardServiceImpl implements BoardService {
         User user = optionalUser.get();
 
         List<Board> list = boardRepository.findByUser(user);
+        return list;
+    }
+
+    @Override
+    public List<BoardComment> commentList(String email) {
+        Optional<User> optionalUser = userRepository.findByEmail(email);
+        if (!optionalUser.isPresent()) {
+            throw new BizException("회원 정보가 존재하지 않습니다.");
+        }
+        User user = optionalUser.get();
+
+        List<BoardComment> list = boardCommentRepository.findByUser(user);
         return list;
     }
 
