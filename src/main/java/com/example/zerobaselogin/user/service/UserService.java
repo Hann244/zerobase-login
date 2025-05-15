@@ -1,5 +1,6 @@
 package com.example.zerobaselogin.user.service;
 
+import com.example.zerobaselogin.board.model.ServiceResult;
 import com.example.zerobaselogin.user.entity.User;
 import com.example.zerobaselogin.user.model.UserLogCount;
 import com.example.zerobaselogin.user.model.UserNoticeCount;
@@ -19,4 +20,7 @@ public interface UserService {
 
     // 좋아요를 가장 많이 한 사용자 목록 리턴
     List<UserLogCount> getUserLikeBest();
+
+    // 관심 사용자 등록
+    ServiceResult addInterestUser(String email, Long id);
 }
