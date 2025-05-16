@@ -1,6 +1,7 @@
 package com.example.zerobaselogin.extra.controller;
 
 import com.example.zerobaselogin.common.model.ResponseResult;
+import com.example.zerobaselogin.extra.model.AirInput;
 import com.example.zerobaselogin.extra.model.OpenApiResult;
 import com.example.zerobaselogin.extra.model.PharmacySearch;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -92,7 +93,7 @@ public class ApiExtraController {
     }
      */
 
-    // 공공 API 활용 -> 시도/구군 검색 기능 추가
+    // 공공 API 활용 -> 시도/구군 검색 기능 추가 (공공 API가 검색 결과를 못 찾아옴)
     @GetMapping("/pharmacy")
     public ResponseEntity<?> pharmacy(@RequestBody PharmacySearch pharmacySearch) {
 
@@ -133,4 +134,33 @@ public class ApiExtraController {
 
         return ResponseResult.succeess(jsonResult);
     }
+
+    // 공공 API 활용 (미세먼지, XML) -> 검색 기능 잘 됨
+
+    @GetMapping("/air")
+    public String air(@RequestBody AirInput airInput) {
+
+        String apiKey = "nqObNjQeEw60Ri9U%2B9Yzcs0TCPYtUQfj1OVRom6hKGqxDuM0V39BAxNhcZX6FBcPgkhvXkts6Fv%2Bt%2FgC%2F0SJRA%3D%3D";
+        String url = "https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?serviceKey=%s&pageNo=1&numOfRows=10&sidoName=%s";
+
+        String apiResult = "";
+
+        // url이 깨지는 경우가 있어서 URI로 받아줄 필요가 있음
+        try {
+            URI uri = new URI(String.format(url, apiKey, URLEncoder.encode(airInput.getSearchSido(), "UTF-8")));
+            RestTemplate restTemplate = new RestTemplate();
+            HttpHeaders headers = new HttpHeaders();
+            headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
+
+            String result = restTemplate.getForObject(uri, String.class);
+
+            apiResult = result;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return apiResult;
+    }
+
 }
