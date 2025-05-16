@@ -61,6 +61,15 @@ public interface BoardService {
     // 본인이 작성한 코멘트 목록 리턴
     List<BoardComment> commentList(String email);
 
+    // 게시글 상세정보
+    Board detail(Long id);
+
+    // 게시글 목록
+    List<Board> list();
+
+    // 게시글 작성
+    ServiceResult add(String email, BoardInput boardInput);
+
     // 게시판 타입의 게시글 수를 리턴
     //List<BoardTypeCount> getBoardTypeCount();
 }

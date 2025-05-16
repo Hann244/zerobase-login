@@ -21,3 +21,10 @@ spring:
       format_sql: true
       hibernate:
         show_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: trace
+    org.hibernate.type: trace
+  file:
+    name: ./logs/spring-jpa.log
