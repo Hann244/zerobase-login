@@ -218,4 +218,11 @@ public class ApiBoardController {
         return ResponseResult.succeess(board);
 
     }
+
+    // 인터셉터를 이용하여 API요청에 대한 정보를 log에 기록하는 기능
+    @GetMapping()
+    public ResponseEntity<?> list() {
+        List<Board> list = boardService.list();
+        return ResponseResult.succeess(list);
+    }
 }
