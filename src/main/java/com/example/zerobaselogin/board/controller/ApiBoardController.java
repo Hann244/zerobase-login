@@ -218,4 +218,21 @@ public class ApiBoardController {
         return ResponseResult.succeess(board);
 
     }
+
+    // 인터셉터를 이용하여 API요청에 대한 정보를 log에 기록하는 기능
+    @GetMapping()
+    public ResponseEntity<?> list() {
+        List<Board> list = boardService.list();
+        return ResponseResult.succeess(list);
+    }
+
+    // 인터셉터를 활용하여 JWT 인증이 필요한 API에 대해서(글쓰기) 토큰 유효성을 검증하는 API
+    @PostMapping()
+    public ResponseEntity<?> add(@RequestBody BoardInput boardInput,
+                                 @RequestHeader("F-TOKEN") String token) {
+
+        String email = JWTUtils.getIssuer(token);
+        ServiceResult result = boardService.add(email, boardInput);
+        return ResponseResult.result(result);
+    }
 }

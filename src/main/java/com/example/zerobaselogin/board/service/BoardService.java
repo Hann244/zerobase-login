@@ -64,6 +64,12 @@ public interface BoardService {
     // 게시글 상세정보
     Board detail(Long id);
 
+    // 게시글 목록
+    List<Board> list();
+
+    // 게시글 작성
+    ServiceResult add(String email, BoardInput boardInput);
+
     // 게시판 타입의 게시글 수를 리턴
     //List<BoardTypeCount> getBoardTypeCount();
 }
